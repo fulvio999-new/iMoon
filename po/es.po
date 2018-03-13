@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-13 22:00+0100\n"
+"PO-Revision-Date: 2018-03-14 00:20+0100\n"
+"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"Language-Team: UBports Spanish Team\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:57
+msgid "Success"
+msgstr "Éxito"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:62
+msgid "Latitude, Longitude must be numeric with '.' decimal separator"
+msgstr "Latidud y longitud debe ser numérico con '.' como separador decimal"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:67
+msgid "Missing required value"
+msgstr "Falta el valor requerido"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:72
+msgid "City already exist in the country"
+msgstr "La ciudad ya existe en el país"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:115
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:104
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:157
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:106
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:158
+msgid "Found"
+msgstr "Encontrado"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:115
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:104
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:106
+msgid "country"
+msgstr "país"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:129
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:118
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:171
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:120
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:172
+msgid "Close"
+msgstr "Cerrar"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:137
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:126
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:179
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:128
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:180
+msgid "Select"
+msgstr "Seleccionar"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:158
+msgid "Add a new city"
+msgstr "Añadir una nueva ciudad"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:181
+msgid "Country:"
+msgstr "País:"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:188
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:312
+msgid "Choose"
+msgstr "Elegir"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:202
+msgid "City:"
+msgstr "Ciudad:"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:219
+msgid "Latitude:"
+msgstr "Latitud:"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:236
+msgid "Longitude:"
+msgstr "Longitud:"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:253
+msgid "TimeZone:"
+msgstr "Zona horaria:"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:270
+msgid "UTC offset:"
+msgstr "Diferencia horaria con UTC:"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:285
+msgid "Insert"
+msgstr "Introducir"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:332
+msgid "Field Required"
+msgstr "Campo requerido"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:344
+msgid "Terminology and Notes"
+msgstr "Terminología y notas"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:364
+msgid "Solar-noon: time when the sun is in the highest position"
+msgstr "Mediodía: momento en el que el sol está en su posición más alta"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:372
+msgid "Azimuth is an angular measurement in a spherical coordinate system"
+msgstr "Azimut es una medida angular en un sistema de coordenadas esféricas"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:380
+msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
+msgstr "Los valores de latitud y longitud usan una escala de grados decimales (GD)"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:388
+msgid "Sun and Moon parameters are show with 10 decimal digits"
+msgstr "Los parámetros de sol y luna se muestran con 10 dígitos decimales"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:396
+msgid "Day light saving (DLS): of advancing clocks during summer months"
+msgstr "Horario de verano (DLS): el avance de los relojes en los meses de verano"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:404
+msgid "The showed times don't consider DLS (add +1 hour to get it)"
+msgstr ""
+"Los horarios mostrados no consideran el horario de verano "
+"(añada +1 hora para obtenerlo)"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:412
+msgid "1 rad = 180°/π = 57.295779513°"
+msgstr "1 radián = 180°/π = 57.295779513°"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:55
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:56
+msgid "Info"
+msgstr "Información"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:67
+msgid "Add"
+msgstr "Añadir"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:77
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:78
+msgid "Help"
+msgstr "Ayuda"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:137
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:260
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:139
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:261
+msgid "City"
+msgstr "Ciudad"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:157
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:158
+msgid "city"
+msgstr "ciudad"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:249
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:250
+msgid "Country"
+msgstr "País"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:278
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:272
+msgid "Date"
+msgstr "Fecha"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:290
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:284
+msgid "Calculate"
+msgstr "Calcular"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:303
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:303
+msgid "hours"
+msgstr "horas"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:446
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:441
+msgid "At that date, country COULD use 'DLS': add +1 hour at displayed times"
+msgstr ""
+"En esa fecha, el país PODRÍA usar el horario de verano: añada +1 hora a "
+"los horarios mostrados"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
+msgid "Message"
+msgstr "Mensaje"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:13
+msgid "Operation result:  "
+msgstr "Resultado de la operación: "
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:9
+msgid "Product Info"
+msgstr "Información del producto"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:10
+msgid ""
+"A simple offline Moon phases and Sun parameters calculator based on SunCalc, "
+"a BSD-licensed JS library"
+msgstr ""
+"Una sencilla calculadora, sin conexión, de fases lunares y parámetros del sol basada en SunCalc, "
+"una biblioteca JS con licencia BSD"
+
+#: /media/sf_ubuntu-devel/my-apps/iMoon/source/build-iMoon-Desktop-Debug/iMoon/iMoon.desktop.h:1
+msgid "iMoon"
+msgstr "iMoon" 
