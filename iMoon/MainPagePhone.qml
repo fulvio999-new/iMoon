@@ -372,10 +372,10 @@ Page {
                     var moonPhase = Suncalc.getMoonIllumination(chosenDate);
 
                     /* illuminated fraction of the moon; varies from 0.0 (new moon) to 1.0 (full moon) */
-                    moonPhaseFractionLabel.text = i18n.tr("Fraction")+": "+ parseFloat(moonPhase.fraction).toFixed(4)
+                    moonPhaseFractionLabel.text = i18n.tr("Illuminated fraction")+": "+ parseFloat(moonPhase.fraction).toFixed(4)
 
                     /* moon phase; varies from 0.0 to 1.0 if > 0.50 moon decrease */
-                    moonPhaseLabel.text = i18n.tr("Phase")+": "+moonPhase.phase + "<b> ("+MoonPhaseUtil.decodeMoonPhaseValue(moonPhase.phase)+ " )</b>"
+                    moonPhaseLabel.text = i18n.tr("Phase")+": "+moonPhase.phase + "<br/> <b> ("+MoonPhaseUtil.decodeMoonPhaseValue(moonPhase.phase)+ " )</b>"
 
                     var moonAngleDegree = moonPhase.angle * 180 / Math.PI;
                     //if > 0.50 moon decrease
@@ -449,11 +449,14 @@ Page {
                 id: cityTimezone
                 text: " "
             }
-
-            Label{
-                id: cityUtcOffset
-                text: " "
-            }
+        }
+         Row{
+           id:cityUtcOffsetRow
+           anchors.horizontalCenter: parent.horizontalCenter
+           Label{
+              id: cityUtcOffset
+              text: " "
+           }
         }
 
        /* in case of DLS show a warning */

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 16:20+0000\n"
+"POT-Creation-Date: 2018-03-27 16:47+0000\n"
 "PO-Revision-Date: 2018-03-14 00:20+0100\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
@@ -278,7 +278,8 @@ msgid "Parallactic Angle"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:375
-msgid "Fraction"
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:373
+msgid "Illuminated fraction"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:378
@@ -303,16 +304,12 @@ msgstr "iMoon"
 msgid "MoonSet"
 msgstr "iMoon"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:467
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:470
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:462
 msgid "At that date, country COULD use 'DLS': add +1 hour at displayed times"
 msgstr ""
 "En esa fecha, el país PODRÍA usar el horario de verano: añada +1 hora a los "
 "horarios mostrados"
-
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:373
-msgid "Illuminated fraction"
-msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
 msgid "Message"

@@ -8,3 +8,4 @@ V 1.3
 - set max 4 decimal digit (for readability)
 - added missing i18n message in sources
 - improved moon phase label to show ful moon, new moon
+- fix little layout problems in case of reduced screen size

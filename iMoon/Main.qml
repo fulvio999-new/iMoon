@@ -27,12 +27,12 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "imoon.fulvio"
 
-    width: units.gu(100)
-    height: units.gu(80)
+    //width: units.gu(100)
+    //height: units.gu(80)
 
     /* phone */
-    //width: units.gu(50)
-    //height: units.gu(96)
+    width: units.gu(50)
+    height: units.gu(96)
 
     anchorToKeyboard: true
 
