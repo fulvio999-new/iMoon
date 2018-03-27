@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 22:00+0100\n"
+"POT-Creation-Date: 2018-03-27 13:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,194 +17,304 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:57
-msgid "Success"
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:9
+msgid "Set current country and city as favourite ?"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:62
-msgid "Latitude, Longitude must be numeric with '.' decimal separator"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:67
-msgid "Missing required value"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:72
-msgid "City already exist in the country"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:115
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:157
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:106
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:158
-msgid "Found"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:115
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:106
-msgid "country"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:129
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:118
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:171
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:120
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:172
-msgid "Close"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:137
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:126
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:179
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:128
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:180
-msgid "Select"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:158
-msgid "Add a new city"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:181
-msgid "Country:"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:188
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:312
-msgid "Choose"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:202
-msgid "City:"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:219
-msgid "Latitude:"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:236
-msgid "Longitude:"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:253
-msgid "TimeZone:"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:270
-msgid "UTC offset:"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:285
-msgid "Insert"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:332
-msgid "Field Required"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:344
-msgid "Terminology and Notes"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:364
-msgid "Solar-noon: time when the sun is in the highest position"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:372
-msgid "Azimuth is an angular measurement in a spherical coordinate system"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:380
-msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:388
-msgid "Sun and Moon parameters are show with 10 decimal digits"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:396
-msgid "Day light saving (DLS): of advancing clocks during summer months"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:404
-msgid "The showed times don't consider DLS (add +1 hour to get it)"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:412
-msgid "1 rad = 180°/π = 57.295779513°"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:55
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:56
-msgid "Info"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:67
-msgid "Add"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:77
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:78
-msgid "Help"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:137
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:260
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:139
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:261
-msgid "City"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:157
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:158
-msgid "city"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:249
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:250
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:18
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:194
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:270
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:271
 msgid "Country"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:278
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:272
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:18
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:215
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:158
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:281
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:160
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:282
+msgid "City"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:22
+msgid "Set a valid country and city"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:32
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:142
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:139
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:192
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:141
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:193
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:16
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:13
+msgid "Close"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:41
+msgid "Confirm"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:48
+msgid "Operation executed successfully"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:70
+msgid "Success"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:75
+msgid "Latitude, Longitude must be numeric with '.' decimal separator"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:80
+msgid "Missing required value"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:85
+msgid "City already exist in the country"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:128
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:125
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:178
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:127
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:179
+msgid "Found"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:128
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:125
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:127
+msgid "country"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:150
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:147
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:200
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:149
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:201
+msgid "Select"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:171
+msgid "Add a new city"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:201
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:325
+msgid "Choose"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:232
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:325
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:325
+msgid "Latitude"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:249
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:326
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:326
+msgid "Longitude"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:266
+msgid "TimeZone"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:283
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:324
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:324
+msgid "UTC offset"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:298
+msgid "Insert"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:345
+msgid "Field Required"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:357
+msgid "Terminology and Notes"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:377
+msgid "Solar-noon: time when the sun is in the highest position"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:385
+msgid "Azimuth is an angular measurement in a spherical coordinate system"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:393
+msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:401
+msgid "Sun and Moon parameters are show with 10 decimal digits"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:409
+msgid "Day light saving (DLS): of advancing clocks during summer months"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:417
+msgid "The showed times don't consider DLS (add +1 hour to get it)"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:425
+msgid "1 rad = 180°/π = 57.295779513°"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:67
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:68
+msgid "Info"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:79
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:80
+msgid "Favourite"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:88
+msgid "Add"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:98
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:99
+msgid "Help"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:178
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:179
+msgid "city"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:299
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:293
 msgid "Date"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:290
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:284
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:311
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:305
 msgid "Calculate"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:303
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:303
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:323
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:323
+msgid "Timezone"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:324
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:324
 msgid "hours"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:446
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:441
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:335
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:335
+msgid "Sunrise"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:336
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:336
+msgid "Sunset"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:337
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:337
+msgid "Solar Noon"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:345
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:361
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:345
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:361
+msgid "Altitude"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:345
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:346
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:361
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:363
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:368
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:382
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:345
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:346
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:361
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:363
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:367
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:381
+msgid "degrees"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:346
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:363
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:346
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:363
+msgid "Azimuth"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:365
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:365
+msgid "Distance"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:368
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:367
+msgid "Parallactic Angle"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:375
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:373
+msgid "Fraction"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:378
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:376
+msgid "Phase"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:382
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:381
+msgid "Angle"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:394
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:392
+msgid "MoonRise"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:395
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:393
+msgid "MoonSet"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:467
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:462
 msgid "At that date, country COULD use 'DLS': add +1 hour at displayed times"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
 msgid "Message"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:13
-msgid "Operation result:  "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:13
+msgid "Operation result"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:9
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:9
 msgid "Product Info"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:10
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:10
 msgid ""
 "A simple offline Moon phases and Sun parameters calculator based on SunCalc, "
 "a BSD-licensed JS library"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/iMoon/source/build-iMoon-Desktop-Debug/iMoon/iMoon.desktop.h:1
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/build/iMoon/iMoon.desktop.h:1
 msgid "iMoon"
 msgstr ""

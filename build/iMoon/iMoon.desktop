@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=iMoon
+Name[es]=iMoon
+Exec=qmlscene %U iMoon/Main.qml
+Icon=iMoon/iMoon.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
