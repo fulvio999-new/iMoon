@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 10:08+0000\n"
+"POT-Creation-Date: 2018-03-28 10:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:9
-msgid "Attention"
+msgid "Confirmation"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:18

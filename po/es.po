@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 10:08+0000\n"
+"POT-Creation-Date: 2018-03-28 10:16+0000\n"
 "PO-Revision-Date: 2018-03-27 19:00+0200\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Poedit 2.0.4\n"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:9
-msgid "Attention"
+msgid "Confirmation"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:18
