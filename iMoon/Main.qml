@@ -27,12 +27,12 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "imoon.fulvio"
 
-    //width: units.gu(100)
-    //height: units.gu(80)
+    width: units.gu(100)
+    height: units.gu(85)
 
-    /* phone */
-    width: units.gu(50)
-    height: units.gu(96)
+    /* phone 4.5 */
+    //width: units.gu(50)
+    //height: units.gu(96)
 
     anchorToKeyboard: true
 
@@ -382,7 +382,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Label{
                         id: azimuth
-                        text: i18n.tr("Azimuth is an angular measurement in a spherical coordinate system")
+                        text: i18n.tr("Azimuth: angular measurement in a spherical coordinate system")
                     }
                 }
 
@@ -406,7 +406,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Label{
                         id: dayLight
-                        text: i18n.tr("Day light saving (DLS): of advancing clocks during summer months")
+                        text: i18n.tr("Day light saving (DLS): advancing clocks during summer months")
                     }
                 }
 
@@ -414,7 +414,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Label{
                         id: hourInfo
-                        text: "<b>"+i18n.tr("The showed times don't consider DLS (add +1 hour to get it)")+"</b>"
+                        text: "<b>"+i18n.tr("Showed times don't consider DLS (add +1 hour to get it)")+"</b>"
                     }
                 }
 

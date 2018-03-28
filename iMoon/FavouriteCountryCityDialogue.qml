@@ -6,7 +6,7 @@ import Ubuntu.Components.Popups 1.3
 /* Ask if save current country, city as favourites */
 Dialog {
     id: favouriteCountryCityDialog
-    title: i18n.tr("Set current country and city as favourite ?")
+    title: i18n.tr("Confirmation")
 
     /* the chosen values to save */
     property string country;
@@ -17,14 +17,22 @@ Dialog {
       //check for valid values
       if(country === i18n.tr("Country") && city === i18n.tr("City"))
       {
-        confirmButton.enabled = false;
-        resultLabel.color = "red";
-        resultLabel.text = i18n.tr("Set a valid country and city");
+         confirmButton.enabled = false;
+         resultLabel.color = "red";
+         resultLabel.text = i18n.tr("Set a valid country and city");
       }
     }
 
     Column{
         spacing: units.gu(2)
+
+        Row{
+           anchors.horizontalCenter: parent.horizontalCenter
+          Text {
+              text: i18n.tr("Set country and city as favourite ?")+"<br/> "+i18n.tr("(will be loaded at startup)")
+              color: "navy"
+           }
+        }
 
         Row {
             spacing: units.gu(2)

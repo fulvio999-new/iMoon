@@ -161,6 +161,7 @@ Page {
                             moonInfoRow.visible = false
                             cityInfoRow.visible = false
                             cityTimeInfoRow.visible = false
+                            cityUtcOffsetRow.visible = false
                             alertRow.visible = false
                          }
                      }
@@ -208,6 +209,7 @@ Page {
                               moonInfoRow.visible = false
                               cityInfoRow.visible = false
                               cityTimeInfoRow.visible = false
+                              cityUtcOffsetRow.visible = false
                               alertRow.visible = false
                           }
                       }
@@ -327,11 +329,6 @@ Page {
 
 
                     //****************** SUN ******************
-                    if(Dateutils.isDayLightSaving(chosenDate)){
-                        //console.log("DLS Adding 1 hour");
-                        dlsTime = 'true';
-                    }
-
                     sunriseLabel.text = i18n.tr("Sunrise")+": "+Dateutils.getLocalTime(times.sunrise,cityCoordinates.utcoffset);
                     sunsetLabel.text = i18n.tr("Sunset")+": "+Dateutils.getLocalTime(times.sunset,cityCoordinates.utcoffset);
                     solarNoonLabel.text = i18n.tr("Solar Noon")+": "+Dateutils.getLocalTime(times.solarNoon,cityCoordinates.utcoffset);
@@ -346,7 +343,6 @@ Page {
                     sunPositionAzimuthLabel.text = i18n.tr("Azimuth")+": "+parseFloat(sunPosition.azimuth).toFixed(4)+ " rad <br/> ("+parseFloat(azimuthDegree).toFixed(4)+" "+i18n.tr("degrees")+")"
 
                     //DEBUG: PrintUtils.printSunReport(chosenDate, times, sunPosition);
-
 
                     //****************** MOON ************************
                     var moonPosition = Suncalc.getMoonPosition(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
@@ -400,12 +396,6 @@ Page {
 
                     //DEBUG: PrintUtils.printMoonReport(chosenDate, moonPosition, moonPhase, moonRise);
 
-                    if(dlsTime === 'true'){
-                        alertRow.visible = true;
-                    }else{
-                         alertRow.visible = false;
-                    }
-
                     sunImageContainer.visible = true
                     moonImageContainer.visible = true
                     resultColumn.visible = true
@@ -413,6 +403,8 @@ Page {
                     moonInfoRow.visible = true
                     cityInfoRow.visible = true
                     cityTimeInfoRow.visible = true
+                    cityUtcOffsetRow.visible = true
+                    alertRow.visible = true
                 }
             }
         }
@@ -459,15 +451,14 @@ Page {
            }
         }
 
-       /* in case of DLS show a warning */
+       /* if DLS show a warning */
        Row{
            id: alertRow
-           visible: false
            anchors.horizontalCenter: parent.horizontalCenter
-
+           visible: false
            Label{
                id: message
-               text: i18n.tr("At that date, country COULD use 'DLS': add +1 hour at displayed times")
+               text: i18n.tr("Times does not care of DayLight Saving: if used add +1 hour")
                color: "orange"
            }
        }

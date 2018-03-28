@@ -327,11 +327,6 @@ Page {
 
                     //****************** SUN ******************
 
-                    if(Dateutils.isDayLightSaving(chosenDate)){
-                        //console.log("DLS Adding 1 hour");
-                        dlsTime = 'true';
-                    }
-
                     sunriseLabel.text = i18n.tr("Sunrise")+": "+Dateutils.getLocalTime(times.sunrise,cityCoordinates.utcoffset);
                     sunsetLabel.text = i18n.tr("Sunset")+": "+ Dateutils.getLocalTime(times.sunset,cityCoordinates.utcoffset);
                     solarNoonLabel.text = i18n.tr("Solar Noon")+": "+Dateutils.getLocalTime(times.solarNoon,cityCoordinates.utcoffset);
@@ -400,19 +395,13 @@ Page {
 
                     //Dateutils.printDateLocalTime(times.sunrise, times.sunset, moonRise.rise, moonRise.set, -3);
 
-
-                    if(dlsTime === 'true'){
-                        alertRow.visible = true;
-                    }else{
-                         alertRow.visible = false;
-                    }
-
                     sunImageContainer.visible = true
                     moonImageContainer.visible = true
                     resultColumn.visible = true
                     sunInfoRow.visible = true
                     moonInfoRow.visible = true
                     cityInfoRow.visible = true
+                    alertRow.visible = true;
                 }
             }
         }
@@ -459,7 +448,7 @@ Page {
 
             Label{
                 id: message
-                text: i18n.tr("At that date, country COULD use 'DLS': add +1 hour at displayed times")
+                text: i18n.tr("Times does not care of DayLight Saving: if used add +1 hour")
                 color: "orange"
             }
         }

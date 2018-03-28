@@ -145,7 +145,7 @@
 
 
     /* Utility to convert time chosen by user in the gui to local time of the city applying the utcOffset ot the city */
-    function getLocalTime(dateToConvert, utcOffset){       
+    function getLocalTime(dateToConvert, utcOffset){
 
        return Dateutils.getTimeFromDate( Dateutils.getLocalCityTime(dateToConvert,utcOffset) );
     }
@@ -169,8 +169,10 @@
       Problem: the list of country that apply DSL can change every year: is necessary update the App
       Solution: use always solar time and add a warning label
 
+      NOT USED: seems does not work
+
     */
-    function isDayLightSaving(dateToCheck){       
+    function isDayLightSaving(dateToCheck){
 
         Date.prototype.stdTimezoneOffset = function() {
            var jan = new Date(this.getFullYear(), 0, 1);
