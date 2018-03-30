@@ -1,7 +1,7 @@
 {
     "name": "imoon.fulvio",
     "description": "A simple tool to display current moon phase status and phase calculator",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "iMoon",
     "hooks": {
         "iMoon": {
