@@ -12,6 +12,8 @@ import "DateUtils.js" as Dateutils
 import "PrintUtils.js" as PrintUtils
 import "MoonPhaseUtil.js" as MoonPhaseUtil
 
+import "Utility.js" as Utility
+
 
 /*
    Main page with the layout for Phones
@@ -244,7 +246,17 @@ Page {
                }
      }
     /* -------------------------------------------------------------------------*/
-
+    Flickable {
+                id: resultPageFlickable
+                clip: true
+                contentHeight: Utility.getContentHeight()
+                anchors {
+                       top: parent.top
+                       left: parent.left
+                       right: parent.right
+                       bottom: mainPage.bottom
+                       bottomMargin: units.gu(2)
+                }
     Column{
           id: resultColumn
           spacing: units.gu(1.5)
@@ -608,4 +620,13 @@ Page {
 
          }
       }
+
+    } //Flickable
+
+      /* To show a scrolbar on the side */
+      Scrollbar {
+            flickableItem: resultPageFlickable
+            align: Qt.AlignTrailing
+      }
+
   }

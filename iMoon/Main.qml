@@ -27,16 +27,30 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "imoon.fulvio"
 
-    width: units.gu(100)
-    height: units.gu(85)
+    /*------- Tablet (width >= 110) -------- */
+    //vertical
+    //width: units.gu(75)
+    //height: units.gu(111)
 
-    /* phone 4.5 */
+    //horizontal
+    //width: units.gu(111)
+    //height: units.gu(90)
+    /* ----- phone 4.5 (the smallest one) ---- */
+    //vertical
     //width: units.gu(50)
     //height: units.gu(96)
 
+    //horizontal
+    width: units.gu(96)
+    height: units.gu(50)
+    /* -------------------------------------- */
+
+    //true if horizontal screen
+    property bool landscapeWindow: root.width > root.height
+
     anchorToKeyboard: true
 
-    property string appVersion : "1.4.1"
+    property string appVersion : "1.4.2"
     property int rectangle_container_size: Math.min (width / 1, height / 2) * 0.8
 
     /* the chosen Date saved as Javascript date object  */
@@ -92,7 +106,7 @@ MainView {
         /* set the firts page of the application depending on the page width */
         Component.onCompleted: {
 
-          if(root.width > units.gu(80)) {
+          if(root.width > units.gu(110)) {
               pageStack.push(mainPageTablet)
            }else{
                pageStack.push(mainPagePhone)
