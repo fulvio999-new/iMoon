@@ -27,16 +27,16 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "imoon.fulvio"
 
-    //width: units.gu(100)
-    //height: units.gu(85)
+    width: units.gu(100)
+    height: units.gu(85)
 
     /* phone 4.5 */
-    width: units.gu(50)
-    height: units.gu(96)
+    //width: units.gu(50)
+    //height: units.gu(96)
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.4"
+    property string appVersion : "1.4.1"
     property int rectangle_container_size: Math.min (width / 1, height / 2) * 0.8
 
     /* the chosen Date saved as Javascript date object  */
