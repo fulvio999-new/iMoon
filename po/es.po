@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-30 12:42+0000\n"
-"PO-Revision-Date: 2018-03-30 13:52+0200\n"
+"POT-Creation-Date: 2018-05-02 09:41+0000\n"
+"PO-Revision-Date: 2018-05-02 11:47+0200\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
 "Language: es\n"
@@ -163,8 +163,8 @@ msgstr ""
 "Los valores de latitud y longitud usan una escala de grados decimales (GD)"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:401
-msgid "Sun and Moon parameters are show with 10 decimal digits"
-msgstr "Los parámetros de sol y luna se muestran con 10 dígitos decimales"
+msgid "Sun and Moon parameters are show with 4 decimal digits"
+msgstr "Los parámetros de sol y luna se muestran con 4 dígitos decimales"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:409
 msgid "Day light saving (DLS): advancing clocks during summer months"
@@ -306,7 +306,7 @@ msgstr "Luna puesta"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:461
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:451
 msgid "Times does not care of DayLight Saving: if used add +1 hour"
-msgstr "Horas no le importa el DayLight Saving: si se usa, agregue +1 hora"
+msgstr "Horas no le importa el DayLight: si se usa, agregue +1 hora"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
 msgid "Message"
@@ -325,8 +325,8 @@ msgid ""
 "A simple offline Moon phases and Sun parameters calculator based on SunCalc, "
 "a BSD-licensed JS library"
 msgstr ""
-"Calculadora, sin conexión, de fases lunares y parámetros del sol basada en "
-"SunCalc, una biblioteca JS con licencia BSD"
+"Calculadora, sin conexión, de fases lunares y del sol basada en SunCalc: "
+"biblioteca JS con licencia BSD"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/build/iMoon/iMoon.desktop.h:1
 msgid "iMoon"

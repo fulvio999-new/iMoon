@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-30 12:42+0000\n"
+"POT-Creation-Date: 2018-05-02 09:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,7 +162,7 @@ msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:401
-msgid "Sun and Moon parameters are show with 10 decimal digits"
+msgid "Sun and Moon parameters are show with 4 decimal digits"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:409

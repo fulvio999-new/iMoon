@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-30 12:42+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2018-05-02 09:00+0000\n"
+"PO-Revision-Date: 2018-05-02 11:45+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:9
 msgid "Confirmation"
@@ -74,7 +74,9 @@ msgstr "Bravo"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:75
 msgid "Latitude, Longitude must be numeric with '.' decimal separator"
-msgstr "La latitude et la longitude doivent être des valeurs numériques dont le séparateur de décimale est « . »"
+msgstr ""
+"Latitude et longitude doivent être numériques. Le séparateur de décimale est "
+"'.'"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:80
 msgid "Missing required value"
@@ -90,7 +92,7 @@ msgstr "Cette ville existe déjà dans le pays"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:127
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:179
 msgid "Found"
-msgstr "Trouvé :"
+msgstr "Trouvé"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:128
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:125
@@ -151,19 +153,21 @@ msgstr "Terminologie et notes"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:377
 msgid "Solar-noon: time when the sun is in the highest position"
-msgstr "Midi solaire : heure à laquelle le Soleil se trouve à sa position la plus haute"
+msgstr ""
+"Midi solaire: heure à laquelle le Soleil se trouve à sa position la plus "
+"haute"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:385
 msgid "Azimuth: angular measurement in a spherical coordinate system"
-msgstr "Azimuth : mesure angulaire dans un système de coordonnées sphériques"
+msgstr "Azimuth: mesure angulaire dans un système de coordonnées sphériques"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:393
 msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
-msgstr "Les valeurs de latitude et de longitude utilisent une échelle de Degrés Décimaux (DD)"
+msgstr "Latitude et longitude utilisent une échelle de Degrés Décimaux (DD)"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:401
 msgid "Sun and Moon parameters are show with 10 decimal digits"
-msgstr "Les paramètres du Soleil et de la Lune sont affichés sous la forme de chiffres à 10 décimales"
+msgstr "Les paramètres sont affichés avec chiffres à 4 décimales"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:409
 msgid "Day light saving (DLS): advancing clocks during summer months"
@@ -171,7 +175,7 @@ msgstr "Heure d'été : avance de l'heure durant les mois d'été"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:417
 msgid "Showed times don't consider DLS (add +1 hour to get it)"
-msgstr "Les heures affichées ne prennent pas en compte l'heure d'été (ajoutez une heure pour l'obtenir)"
+msgstr "Les heures ne prennent pas l'heure d'été: ajoutez une heure"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:425
 msgid "1 rad = 180°/π = 57.295779513°"
@@ -303,7 +307,7 @@ msgstr "Coucher de la Lune"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:461
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:451
 msgid "Times does not care of DayLight Saving: if used add +1 hour"
-msgstr "Les heures affichées ne prennent pas en compte l'heure d'été : ajoutez une heure le cas échéant"
+msgstr "Les heures ne prennent pas l'heure d'été: ajoutez une heure"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
 msgid "Message"
@@ -322,8 +326,8 @@ msgid ""
 "A simple offline Moon phases and Sun parameters calculator based on SunCalc, "
 "a BSD-licensed JS library"
 msgstr ""
-"Un calculateur simple et hors-ligne de phases de la Lune et de paramètres du Soleil basé sur SunCalc, "
-"une bibliothèque JavaScript sous licence BSD"
+"Un calculateur et hors-ligne de phases de la Lune et du Soleil basé sur "
+"SunCalc: JS bibliothèque licence BSD"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/build/iMoon/iMoon.desktop.h:1
 msgid "iMoon"
