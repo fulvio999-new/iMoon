@@ -33,16 +33,16 @@ MainView {
     //height: units.gu(111)
 
     //horizontal
-    //width: units.gu(111)
-    //height: units.gu(90)
+    width: units.gu(111)
+    height: units.gu(90)
     /* ----- phone 4.5 (the smallest one) ---- */
     //vertical
     //width: units.gu(50)
     //height: units.gu(96)
 
     //horizontal
-    width: units.gu(96)
-    height: units.gu(50)
+    //width: units.gu(96)
+    //height: units.gu(50)
     /* -------------------------------------- */
 
     //true if horizontal screen
