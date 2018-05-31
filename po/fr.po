@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:09+0000\n"
-"PO-Revision-Date: 2018-05-02 11:45+0200\n"
+"POT-Creation-Date: 2018-05-31 17:18+0000\n"
+"PO-Revision-Date: 2018-05-31 19:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:9
 msgid "Confirmation"
@@ -76,8 +76,7 @@ msgstr "Bravo"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:91
 msgid "Latitude, Longitude must be numeric with '.' decimal separator"
 msgstr ""
-"Latitude et longitude doivent être numériques. Le séparateur de décimale est "
-"'.'"
+"Latitude et longitude doivent être numériques avec le séparateur de décimale"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:96
 msgid "Missing required value"
@@ -167,7 +166,6 @@ msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
 msgstr "Latitude et longitude utilisent une échelle de Degrés Décimaux (DD)"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/Main.qml:422
-#, fuzzy
 msgid "Sun and Moon parameters are show with 4 decimal digits"
 msgstr "Les paramètres sont affichés avec chiffres à 4 décimales"
 
@@ -293,14 +291,13 @@ msgstr "Phase"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:394
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:378
-#, fuzzy
 msgid "Constellation"
-msgstr "Confirmation"
+msgstr "Constellation"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:395
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:379
 msgid "Moon trajectory"
-msgstr ""
+msgstr "Trajectoire de la lune"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:403
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:388
@@ -325,7 +322,7 @@ msgstr "Les heures ne prennent pas l'heure d'été: ajoutez une heure"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:650
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:627
 msgid "Display"
-msgstr ""
+msgstr "Afficher"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
 msgid "Message"
@@ -340,13 +337,12 @@ msgid "Product Info"
 msgstr "À propos"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:10
-#, fuzzy
 msgid ""
 "A simple offline Moon phases and Sun parameters calculator based on SunCalc "
 "and Mooncalc, a BSD-licensed JS library"
 msgstr ""
 "Un calculateur et hors-ligne de phases de la Lune et du Soleil basé sur "
-"SunCalc: JS bibliothèque licence BSD"
+"SunCalc e Mooncalc: JS bibliothèque licence BSD"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/build/iMoon/iMoon.desktop.h:1
 msgid "iMoon"

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:09+0000\n"
-"PO-Revision-Date: 2018-05-02 11:47+0200\n"
+"POT-Creation-Date: 2018-05-31 17:18+0000\n"
+"PO-Revision-Date: 2018-05-31 19:13+0200\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/FavouriteCountryCityDialogue.qml:9
 msgid "Confirmation"
@@ -291,14 +291,13 @@ msgstr "Fase"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:394
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:378
-#, fuzzy
 msgid "Constellation"
-msgstr "Confirmación"
+msgstr "Constelación"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:395
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:379
 msgid "Moon trajectory"
-msgstr ""
+msgstr "Trayectoria de la luna"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:403
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:388
@@ -323,7 +322,7 @@ msgstr "Horas no le importa el DayLight: si se usa, agregue +1 hora"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPagePhone.qml:650
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/MainPageTablet.qml:627
 msgid "Display"
-msgstr ""
+msgstr "Mostrar"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/NotificationMessage.qml:12
 msgid "Message"
@@ -338,13 +337,12 @@ msgid "Product Info"
 msgstr "Información del producto"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/iMoon/ProductInfoDialogue.qml:10
-#, fuzzy
 msgid ""
 "A simple offline Moon phases and Sun parameters calculator based on SunCalc "
 "and Mooncalc, a BSD-licensed JS library"
 msgstr ""
-"Calculadora, sin conexión, de fases lunares y del sol basada en SunCalc: "
-"biblioteca JS con licencia BSD"
+"Calculadora, sin conexión, de fases lunares y del sol basada en SunCalc y "
+"Mooncalc: biblioteca JS con licencia BSD"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/iMoon/source/iMoon/build/iMoon/iMoon.desktop.h:1
 msgid "iMoon"
