@@ -3,7 +3,7 @@
     function getContentHeight(){
 
         if(root.width > units.gu(110))
-            return mainPage.height + mainPage.height/2 + units.gu(20)
+            return mainPage.height + mainPage.height/2 + units.gu(23)
         else
-            return mainPage.height + mainPage.height/2 + units.gu(20) //phone
+            return mainPage.height + mainPage.height/2 + units.gu(29) //phone
     }

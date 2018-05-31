@@ -10,7 +10,9 @@ import "suncalc.js" as Suncalc
 import "Storage.js" as Storage
 import "DateUtils.js" as Dateutils
 import "PrintUtils.js" as PrintUtils
-import "MoonPhaseUtil.js" as MoonPhaseUtil
+
+/* used to get Moon phase description and zodiac constellation */
+import "mooncalc.js" as Mooncalc
 
 import "Utility.js" as Utility
 
@@ -379,11 +381,22 @@ Page {
                     /* ----- Illumination and Phase ----- */
                     var moonPhase = Suncalc.getMoonIllumination(chosenDate);
 
+                    /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
+                    var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
+
                     /* illuminated fraction of the moon; varies from 0.0 (new moon) to 1.0 (full moon) */
                     moonPhaseFractionLabel.text = i18n.tr("Illuminated fraction")+": "+ parseFloat(moonPhase.fraction).toFixed(4)
 
                     /* moon phase; varies from 0.0 to 1.0 if > 0.50 moon decrease */
-                    moonPhaseLabel.text = i18n.tr("Phase")+": "+moonPhase.phase + "<br/> <b> ("+MoonPhaseUtil.decodeMoonPhaseValue(moonPhase.phase)+ " )</b>"
+                    moonPhaseLabel.text = i18n.tr("Phase")+": "+parseFloat(moonPhase.phase).toFixed(4) + " <b> ("+moonCalcData.phase+ ")</b>"
+
+                    //----- new: params available only with  Mooncalc js
+                    constellationLabel.text = i18n.tr("Constellation")+": "+ moonCalcData.constellation
+                    moonTrajectoryLabel.text = i18n.tr("Moon trajectory")+": "+ moonCalcData.trajectory
+                    /* file name with zodiac image to show */
+                    root.zodiacImage = moonCalcData.constellation +".png"
+                    zodiacImageButton.visible = true
+                    //------
 
                     var moonAngleDegree = moonPhase.angle * 180 / Math.PI;
                     //if > 0.50 moon decrease
@@ -615,6 +628,30 @@ Page {
                 Label {
                     id: moonAngleLabel
                     text: ""
+                }
+
+                Label {
+                   id: moonTrajectoryLabel
+                   text: ""
+                }
+
+                Label {
+                  id: constellationLabel
+                  text : ""
+                }
+
+                Rectangle {
+                    width: units.gu(14)
+                    height:  units.gu(4)
+                    Button {
+                        id: zodiacImageButton
+                        height:parent.height
+                        visible: false
+                        text: i18n.tr("Display")
+                        onClicked: {
+                            PopupUtils.open(zodiacImagePopUp)
+                        }
+                   }
                 }
             }
 

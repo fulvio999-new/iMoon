@@ -10,12 +10,11 @@ import "suncalc.js" as Suncalc
 import "Storage.js" as Storage
 import "DateUtils.js" as Dateutils
 import "PrintUtils.js" as PrintUtils
-import "MoonPhaseUtil.js" as MoonPhaseUtil
 import "ValidationUtils.js" as ValidationUtils
 
 
 /*!
-    \brief MainView with a Label and Button elements
+   App MainView
 */
 
 MainView {
@@ -32,7 +31,7 @@ MainView {
     //width: units.gu(75)
     //height: units.gu(111)
 
-    //horizontal
+    //horizontal (rel)
     width: units.gu(111)
     height: units.gu(90)
     /* ----- phone 4.5 (the smallest one) ---- */
@@ -50,7 +49,7 @@ MainView {
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.4.2"
+    property string appVersion : "1.5"
     property int rectangle_container_size: Math.min (width / 1, height / 2) * 0.8
 
     /* the chosen Date saved as Javascript date object  */
@@ -67,6 +66,9 @@ MainView {
         property string favouriteCountry : '';
         property string favouriteCity : '';
     }
+
+    /* the file name with the zodia image to show: set after performing calculations */
+    property string zodiacImage : ""
 
     Component {
         id: productInfoDialogue
@@ -131,6 +133,11 @@ MainView {
         Component {
             id: mainPagePhone
             MainPagePhone{}
+        }
+
+        Component {
+            id: zodiacImagePopUp
+            ZodiacImage{}
         }
 
         /* ------------- Country Chooser --------------- */
