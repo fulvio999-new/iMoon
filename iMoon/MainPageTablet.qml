@@ -429,7 +429,7 @@ Page {
         Row{
             id: cityInfoRow
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing: units.gu(3)
+            spacing: units.gu(1)
 
             Label{
                 id: cityLatitudeLabel
@@ -477,7 +477,7 @@ Page {
         Row{
             id: sunInfoRow
             spacing: units.gu(2)
-            height:parent.height/3
+            height:parent.height/4
             width: parent.width/3
 
             Rectangle {
@@ -533,8 +533,8 @@ Page {
         /* ------------------- Moon -------------------- */
         Row{
             id: moonInfoRow
-            spacing: units.gu(1.5)
-            height:parent.height/3
+            spacing: units.gu(2)
+            height:parent.height/4
             width: parent.width/3
 
             Rectangle {
