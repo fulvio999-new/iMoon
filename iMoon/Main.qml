@@ -34,7 +34,8 @@ MainView {
     //horizontal (rel)
     width: units.gu(111)
     height: units.gu(90)
-    /* ----- phone 4.5 (the smallest one) ---- */
+
+    /* ----- phone: 4.5 (the smallest one) ---- */
     //vertical
     //width: units.gu(50)
     //height: units.gu(96)
@@ -42,14 +43,42 @@ MainView {
     //horizontal
     //width: units.gu(96)
     //height: units.gu(50)
-    /* -------------------------------------- */
+
+    /* ----- phone: N5  ---- */
+    //vertical
+    //width: units.gu(108)
+    //height: units.gu(192)
+
+    //horizontal
+    //width: units.gu(192)
+    //height: units.gu(108)
+
+    /* ----- phone: One plus One  ---- */
+    //vertical
+    //width: units.gu(108)
+    //height: units.gu(216)
+
+    //horizontal
+    //width: units.gu(216)
+    //height: units.gu(108)
+
+    /* ----- phone: Fairphone  ---- */
+    //vertical
+    //width: units.gu(108)
+    //height: units.gu(192)
+
+    //horizontal
+    //width: units.gu(192)
+    //height: units.gu(108)
+    /* ---------------------------- */
+
 
     //true if horizontal screen
     property bool landscapeWindow: root.width > root.height
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.5.1"
+    property string appVersion : "1.6"
     property int rectangle_container_size: Math.min (width / 1, height / 2) * 0.8
 
     /* the chosen Date saved as Javascript date object  */
@@ -108,16 +137,24 @@ MainView {
         /* set the firts page of the application depending on the page width */
         Component.onCompleted: {
 
-          if(root.width > units.gu(110)) {
-              pageStack.push(mainPageTablet)
-           }else{
-               pageStack.push(mainPagePhone)
-           }
+            if(root.width <= units.gu(54)) {
+               pageStack.push(mainPagePhone) //BQ E4.5
+
+            }else if(root.width > units.gu(110)) {
+                pageStack.push(mainPageTablet)
+             }else{
+                 pageStack.push(mainPagePhone) //phones other than E4.5
+             }
         }
 
-        /* The available country names loaded at App startUp */
+        /* The country names loaded at App startUp form Phone or Tablet main page */
         ListModel {
             id: countryNamesListModel
+        }
+
+        /* the world time zone list (used in Add new city page) */
+        ListModel {
+            id: timeZoneListModel
         }
 
         /* The available city names for the choosen country */
@@ -139,6 +176,49 @@ MainView {
             id: zodiacImagePopUp
             ZodiacImage{}
         }
+
+        /* ------------- Time zone Chooser (used in add new City page) --------------- */
+        Component {
+                 id: timeZoneChooserComponent
+
+                 Dialog {
+                     id: timeZoneChooserDialog
+                     title: i18n.tr("Found")+" "+timeZoneListModel.count+" "+ i18n.tr("zones")
+
+                     OptionSelector {
+                         id: timeZoneOptionSelector
+                         expanded: true
+                         multiSelection: false
+                         delegate: OptionSelectorDelegate { text: zone; }
+                         model: timeZoneListModel
+                         containerHeight: itemHeight * 6
+                     }
+
+                     Row {
+                         spacing: units.gu(2)
+                         Button {
+                             text: i18n.tr("Close")
+                             width: units.gu(14)
+                             onClicked: {
+                                 PopupUtils.close(timeZoneChooserDialog)
+                             }
+                         }
+
+                         Button {
+                             text: i18n.tr("Select")
+                             width: units.gu(14)
+                             onClicked: {
+                                var targetTimeZone = timeZoneListModel.get(timeZoneOptionSelector.selectedIndex).zone;
+                                var utcoffset = timeZoneListModel.get(timeZoneOptionSelector.selectedIndex).utcoffset;
+                                utcOffsetText.text = utcoffset;
+                                timeZoneChooserButton.text = targetTimeZone;
+                                PopupUtils.close(timeZoneChooserDialog)
+                             }
+                         }
+                     }
+               }
+        }
+        /* --------------------------------------------- */
 
         /* ------------- Country Chooser --------------- */
         Component {
@@ -173,7 +253,13 @@ MainView {
                              onClicked: {
                                 var targetCountry = countryNamesListModel.get(cityNameOptionSelector.selectedIndex).country;
                                 Storage.getCityNames(targetCountry);
+                                /* get the available Timezone in the choosen country */
+                                Storage.getTimeZonesForCountry(targetCountry);
+
                                 addCountryChooserButton.text = targetCountry;
+                                timeZoneChooserButton.text = i18n.tr("Choose");
+                                utcOffsetText.text = "";
+                                timeZoneChooserButton.enabled = true;
                                 PopupUtils.close(countryNameChooserDialog)
                              }
                          }
@@ -283,14 +369,21 @@ MainView {
 
                     Label{
                         id: timezoneLabel
-                        anchors.verticalCenter: timeZoneText.verticalCenter
+                        anchors.verticalCenter: timeZoneChooserButton.verticalCenter
                         text: "* "+i18n.tr("TimeZone")+":"
                     }
 
-                    TextField{
-                        id: timeZoneText
+                    Button {
+                        id: timeZoneChooserButton
+                        enabled:false
+                        iconName: "find"
                         width: units.gu(23)
+                        text: i18n.tr("Choose")
+                        onClicked: {
+                            PopupUtils.open(timeZoneChooserComponent, timeZoneChooserButton)
+                        }
                     }
+
                 }
 
                 //---------- UTC offset -------
@@ -306,6 +399,7 @@ MainView {
 
                     TextField{
                         id: utcOffsetText
+                        readOnly: true
                         width: units.gu(23)
                     }
                 }
@@ -328,7 +422,7 @@ MainView {
                                       ValidationUtils.isInputTextEmpty(newCityNameText.text) ||
                                       ValidationUtils.isInputTextEmpty(latitudeText.text)    ||
                                       ValidationUtils.isInputTextEmpty(longitudeText.text)   ||
-                                      ValidationUtils.isInputTextEmpty(timeZoneText.text)    ||
+                                      ValidationUtils.isInputTextEmpty(timeZoneChooserButton.text)    ||
                                       ValidationUtils.isInputTextEmpty(utcOffsetText.text))
 
                             {
@@ -356,7 +450,6 @@ MainView {
                           }
                        }
                }
-
 
                Row{
                     anchors.horizontalCenter: parent.horizontalCenter

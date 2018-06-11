@@ -14,7 +14,7 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 
 # specify translation domain, this must be equal with the
 # app name in the manifest file
-UBUNTU_TRANSLATION_DOMAIN="imoon.username"
+UBUNTU_TRANSLATION_DOMAIN="imoon.fulvio"
 
 # specify the source files that should be included into
 # the translation file, from those files a translation
@@ -34,7 +34,7 @@ aptest.commands = bash $$PWD/iMoon/tests/autopilot/run
 aptest.depends  = sub-iMoon
 
 unittest.target   = check
-unittest.commands = /usr/bin/qmltestrunner -input $$PWD/iMoon/tests/unit 
+unittest.commands = /usr/bin/qmltestrunner -input $$PWD/iMoon/tests/unit
 unittest.depends  = sub-iMoon
 
 QMAKE_EXTRA_TARGETS += aptest unittest
