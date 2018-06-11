@@ -47,6 +47,28 @@
        }
     }
 
+    /* load the Time zones for the given country to fill the model used in 'Add new city' page */
+    function getTimeZonesForCountry(country){
+
+        /* remove old values */
+        timeZoneListModel.clear();
+
+        var db = getDatabase();
+        var rs;
+        db.transaction(function(tx) {
+            rs = tx.executeSql("SELECT distinct(timezone), utcoffset FROM location where country='"+country+"' order by timezone asc");
+        }
+
+        );
+
+        /* Fill the ListModel to be shown */
+        for(var i =0;i < rs.rows.length;i++) {
+           timeZoneListModel.append({"zone" : rs.rows.item(i).timezone, "utcoffset" : rs.rows.item(i).utcoffset } );
+           //console.log("Found country: "+rs.rows.item(i).country);
+        }
+
+    }
+
     /* get the city coordinates (latitude longitude, timezone, utcoffset) for the given city */
     function getCityCoordinates(countryName, cityName){
 
@@ -10740,5 +10762,3 @@
 
 });
 }
-
-
