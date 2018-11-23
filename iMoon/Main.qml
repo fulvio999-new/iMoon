@@ -78,7 +78,7 @@ MainView {
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.6"
+    property string appVersion : "1.6.1"
     property int rectangle_container_size: Math.min (width / 1, height / 2) * 0.8
 
     /* the chosen Date saved as Javascript date object  */
@@ -432,7 +432,7 @@ MainView {
                                 PopupUtils.open(notificationCityDuplicatedDialogue)
 
                             }else{
-                                Storage.addNewCity(addCountryChooserButton.text, newCityNameText.text, latitudeText.text, longitudeText.text, timeZoneText.text,utcOffsetText.text)
+                                Storage.addNewCity(addCountryChooserButton.text, newCityNameText.text, latitudeText.text, longitudeText.text, timeZoneChooserButton.text,utcOffsetText.text)
 
                                 PopupUtils.open(notificationSuccessDialogue)
 
