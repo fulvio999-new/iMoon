@@ -142,7 +142,7 @@
         var db = getDatabase();
         var res = "";
         db.transaction(function(tx) {
-            var rs = tx.executeSql("INSERT INTO location (country, city, latitude, longitude, timezone, utcoffset) VALUES ('"+countryName+"', '"+cityName+"', "+latitude+", "+longitude+", "+timezone+", "+utcoffset+")");
+            var rs = tx.executeSql("INSERT INTO location (country, city, latitude, longitude, timezone, utcoffset) VALUES ('"+countryName+"', '"+cityName+"', "+latitude+", "+longitude+", '"+timezone+"', "+utcoffset+")");
             if (rs.rowsAffected > 0) {
                 res = "OK";
             } else {

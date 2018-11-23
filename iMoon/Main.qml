@@ -32,13 +32,13 @@ MainView {
     //height: units.gu(111)
 
     //horizontal (rel)
-    width: units.gu(111)
-    height: units.gu(90)
+    //width: units.gu(111)
+    //height: units.gu(90)
 
     /* ----- phone: 4.5 (the smallest one) ---- */
     //vertical
-    //width: units.gu(50)
-    //height: units.gu(96)
+    width: units.gu(50)
+    height: units.gu(96)
 
     //horizontal
     //width: units.gu(96)
@@ -432,7 +432,7 @@ MainView {
                                 PopupUtils.open(notificationCityDuplicatedDialogue)
 
                             }else{
-                                Storage.addNewCity(addCountryChooserButton.text, newCityNameText.text, latitudeText.text, longitudeText.text, timeZoneText.text,utcOffsetText.text)
+                                Storage.addNewCity(addCountryChooserButton.text, newCityNameText.text, latitudeText.text, longitudeText.text, timeZoneChooserButton.text,utcOffsetText.text)
 
                                 PopupUtils.open(notificationSuccessDialogue)
 
