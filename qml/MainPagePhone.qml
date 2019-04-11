@@ -16,6 +16,9 @@ import "mooncalc.js" as Mooncalc
 
 import "Utility.js" as Utility
 
+/* import subfolders */
+import "./images"
+
 
 /*
    Main page with the layout for Phones
@@ -394,7 +397,7 @@ Page {
                     constellationLabel.text = i18n.tr("Constellation")+": "+ moonCalcData.constellation
                     moonTrajectoryLabel.text = i18n.tr("Moon trajectory")+": "+ moonCalcData.trajectory
                     /* file name with zodiac image to show */
-                    root.zodiacImage = moonCalcData.constellation +".png"
+                    root.zodiacImage = Qt.resolvedUrl("images/"+moonCalcData.constellation +".png")
                     zodiacImageButton.visible = true
                     //------
 
@@ -511,7 +514,7 @@ Page {
                 border.color: "transparent"
                 Image {
                     id: sunImage
-                    source: "sun.png"
+                    source: Qt.resolvedUrl("images/sun.png")
                     width: parent.width
                     height: parent.height
                     fillMode: Image.PreserveAspectFit
@@ -568,7 +571,7 @@ Page {
                 border.color: "transparent"
                 Image {
                     id: monImage
-                    source: "moon.png"
+                    source: Qt.resolvedUrl("images/moon.png")
                     width: parent.width
                     height: parent.height
                     fillMode: Image.PreserveAspectFit

@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>suncalc.js</file>
-        <file>Storage.js</file>
-        <file>DateUtils.js</file>
-        <file>sun.png</file>
-    </qresource>
-</RCC>

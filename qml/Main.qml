@@ -78,7 +78,7 @@ MainView {
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.6.1"
+    property string appVersion : "1.6.2"
     property int rectangle_container_size: Math.min (width / 1, height / 2) * 0.8
 
     /* the chosen Date saved as Javascript date object  */
