@@ -78,6 +78,19 @@
     }
 
 
+    function addHoursToDate(date, hours) {
+        return new Date(
+            date.getFullYear(),
+            date.getMonth(),
+            date.getDate(),
+            date.getHours() + hours,
+            0,
+            0,
+            0
+        );
+    }
+
+
     /* Utility function to format the javascript date to have double digits for day and month (default is one digit in js)
        Example return date like: YYYY-MM-DD hh:mm:ss
        eg: 2017-04-28 12:10:05
@@ -88,9 +101,9 @@
        var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
        var yyyy = date.getFullYear();
 
-       var hh = addZeroBeforeHour(date.getHours());
-       var mm = date.getMinutes();
-       var ss = date.getSeconds();
+       var hh = addZeroBefore(date.getHours());
+       var mm = addZeroBefore(date.getMinutes());
+       var ss = addZeroBefore(date.getSeconds());
 
        return (yyyy + "-" + MM + "-" + dd+ " "+hh+":"+mm+":"+ss);
     }
@@ -106,9 +119,10 @@
 
        var hh = addZeroBefore(date.getHours());
        var mm = addZeroBefore(date.getMinutes());
-       var ss = addZeroBefore(date.getSeconds());
+       //var ss = addZeroBefore(date.getSeconds());
 
-       return (hh+":"+mm+":"+ss);
+       //return (hh+":"+mm+":"+ss);
+       return (hh+":"+mm);
     }
 
 

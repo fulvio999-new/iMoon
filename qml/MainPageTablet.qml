@@ -5,14 +5,14 @@ import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
 
 /* library from github.com/mourner/suncalc  */
-import "suncalc.js" as Suncalc
+import "./js/suncalc.js" as Suncalc
 
-import "Storage.js" as Storage
-import "DateUtils.js" as Dateutils
-import "PrintUtils.js" as PrintUtils
+import "./js/Storage.js" as Storage
+import "./js/DateUtils.js" as Dateutils
+import "./js/PrintUtils.js" as PrintUtils
 
 /* used to get Moon phase description and zodiac constellation */
-import "mooncalc.js" as Mooncalc
+import "./js/mooncalc.js" as Mooncalc
 
 
 /*
@@ -81,7 +81,7 @@ Page {
                 iconName: "bookmark"
                 text: i18n.tr("Favourite")
                 onTriggered:{
-                      PopupUtils.open(favouriteCountryCityDialogue,mainPage,{country:countryChooserButton.text, city:cityChooserButton.text})
+                    PopupUtils.open(favouriteCountryCityDialogue,mainPage,{country:countryChooserButton.text, city:cityChooserButton.text})
                 }
             },
 
@@ -90,7 +90,7 @@ Page {
                 iconName: "add"
                 text: "Add"
                 onTriggered:{
-                    pageStack.push(addCityPage)
+                    pageStack.push(Qt.resolvedUrl("AddCityPage.qml"))
                 }
             },
 
@@ -100,7 +100,7 @@ Page {
                 iconName: "help"
                 text: i18n.tr("Help")
                 onTriggered:{
-                    pageStack.push(terminologyPage)
+                    pageStack.push(Qt.resolvedUrl("TerminologyPage.qml"))
                 }
             }
         ]
@@ -308,114 +308,96 @@ Page {
                 enabled:false
                 onClicked: {
 
-                    var cityCoordinates = Storage.getCityCoordinates(countryChooserButton.text, cityChooserButton.text);
-                    var chosenDate = new Date (root.targetDate);
+                  var cityCoordinates = Storage.getCityCoordinates(countryChooserButton.text, cityChooserButton.text);
+                  var chosenDate = new Date (root.targetDate);
+                  var dlsTime = 'false';
 
-                    var dlsTime = 'false';
-
-                    /*
-                      Problem: for the 'chosenDate' can be DLS (Day light saving)
-                      the country that apply DSL can change: is necessary keep updated the App
-                      Solution: display always solar time and add a warning label
-                    */
-
-                    var times = Suncalc.getTimes(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
-
-                    /* show some city parameters */
-                    cityTimezone.text = i18n.tr("Timezone")+": "+cityCoordinates.timezone
-                    cityUtcOffset.text = i18n.tr("UTC offset")+": "+cityCoordinates.utcoffset +" "+i18n.tr("hours")
-                    cityLatitudeLabel.text = i18n.tr("Latitude")+": "+cityCoordinates.latitude + " °"
-                    cityLongitudeLabel.text = i18n.tr("Longitude")+": "+cityCoordinates.longitude+ " °"
-
-                    //****************** SUN ******************
-
-                    sunriseLabel.text = i18n.tr("Sunrise")+": "+Dateutils.getLocalTime(times.sunrise,cityCoordinates.utcoffset);
-                    sunsetLabel.text = i18n.tr("Sunset")+": "+ Dateutils.getLocalTime(times.sunset,cityCoordinates.utcoffset);
-                    solarNoonLabel.text = i18n.tr("Solar Noon")+": "+Dateutils.getLocalTime(times.solarNoon,cityCoordinates.utcoffset);
-
-                    var sunPosition = Suncalc.getPosition(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
-
-                    /* convert values in degrees */
-                    var azimuthDegree = sunPosition.azimuth * 180 / Math.PI;
-                    var altitudeDegree = sunPosition.altitude * 180 / Math.PI;
-
-                    sunPositionAltitudeLabel.text = i18n.tr("Altitude")+": "+sunPosition.altitude+ " rad ("+parseFloat(altitudeDegree).toFixed(4)+" "+ i18n.tr("degrees")+")"
-                    sunPositionAzimuthLabel.text = i18n.tr("Azimuth")+": "+parseFloat(sunPosition.azimuth).toFixed(10)+ " rad ("+parseFloat(azimuthDegree).toFixed(4)+" "+ i18n.tr("degrees")+")"
-
-                    //DEBUG: PrintUtils.printSunReport(chosenDate, times, sunPosition);
+                  /* target city geo parameters */
+                  cityTimezone.text = i18n.tr("Timezone")+": "+cityCoordinates.timezone
+                  cityUtcOffset.text = i18n.tr("UTC offset")+": "+cityCoordinates.utcoffset +" "+i18n.tr("hours")
+                  cityLatitudeLabel.text = i18n.tr("Latitude")+": "+cityCoordinates.latitude + " °"
+                  cityLongitudeLabel.text = i18n.tr("Longitude")+": "+cityCoordinates.longitude + " °"
 
 
-                    //****************** MOON ************************
-                    var moonPosition = Suncalc.getMoonPosition(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
+                  /* ********************************** SUN ********************************* */
+                  var times = Suncalc.getTimes(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
 
-                    /* values in degrees */
-                    var moonAltitudeDegree = moonPosition.altitude * 180 / Math.PI;
-                    var moonAzimuthDegree = moonPosition.azimuth * 180 / Math.PI;
-                    var moonParallacticAngleDegree = moonPosition.parallacticAngle * 180 / Math.PI;
+                  sunriseLabel.text = i18n.tr("Sunrise")+": "+Dateutils.getLocalTime(times.sunrise,cityCoordinates.utcoffset);
+                  sunsetLabel.text = i18n.tr("Sunset")+": "+Dateutils.getLocalTime(times.sunset,cityCoordinates.utcoffset);
+                  solarNoonLabel.text = i18n.tr("Solar Noon")+": "+Dateutils.getLocalTime(times.solarNoon,cityCoordinates.utcoffset);
 
-                    /* Position */
-                    /* altitude: moon altitude above the horizon */
-                    moonAltitudeLabel.text = i18n.tr("Altitude")+": "+moonPosition.altitude + " rad ("+parseFloat(moonAltitudeDegree).toFixed(4)+" "+ i18n.tr("degrees")+")"
+                  var sunPosition = Suncalc.getPosition(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
 
-                    moonAzimuthLabel.text = i18n.tr("Azimuth")+": "+moonPosition.azimuth+ " rad ("+parseFloat(moonAzimuthDegree).toFixed(4)+" "+ i18n.tr("degrees")+")"
+                  /* convert to degrees */
+                  var azimuthDegree = sunPosition.azimuth * 180 / Math.PI;
+                  var altitudeDegree = sunPosition.altitude * 180 / Math.PI;
 
-                    moonDistanceLabel.text = i18n.tr("Distance")+": "+moonPosition.distance + " Km"
+                  sunPositionAltitudeLabel.text = i18n.tr("Altitude")+": "+parseFloat(sunPosition.altitude).toFixed(3)+ " rad <br/> ("+parseFloat(altitudeDegree).toFixed(3)+" "+i18n.tr("degrees")+")"
+                  sunPositionAzimuthLabel.text = i18n.tr("Azimuth")+": "+parseFloat(sunPosition.azimuth).toFixed(3)+ " rad <br/> ("+parseFloat(azimuthDegree).toFixed(3)+" "+i18n.tr("degrees")+")"
 
-                    parallacticAngleLabel.text = i18n.tr("Parallactic Angle")+": "+ parseFloat(moonPosition.parallacticAngle).toFixed(4) + " rad ("+parseFloat(moonParallacticAngleDegree).toFixed(4)+" "+ i18n.tr("degrees")+")"
+                  //DEBUG: PrintUtils.printSunReport(chosenDate, times, sunPosition);
 
-                    /* ----- Illumination and Phase ----- */
-                    var moonPhase = Suncalc.getMoonIllumination(chosenDate);
 
-                    /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
-                    var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
+                  /* ********************************** MOON (using Suncalc & Mooncalc lib) ******************************** */
+                  var moonPosition = Suncalc.getMoonPosition(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
 
-                    /* Suncalc: illuminated fraction of the moon; varies from 0.0 (new moon) to 1.0 (full moon) */
-                    moonPhaseFractionLabel.text = i18n.tr("Illuminated fraction")+": "+ parseFloat(moonPhase.fraction).toFixed(4)
+                  /* convert to degrees */
+                  var moonAltitudeDegree = moonPosition.altitude * 180 / Math.PI;
+                  var moonAzimuthDegree = moonPosition.azimuth * 180 / Math.PI;
+                  var moonParallacticAngleDegree = moonPosition.parallacticAngle * 180 / Math.PI;
 
-                    moonPhaseLabel.text = i18n.tr("Phase")+": "+parseFloat(moonPhase.phase).toFixed(4) + "<b> ("+moonCalcData.phase+ ")</b>"
+                  /* Position */
+                  moonAltitudeLabel.text = i18n.tr("Altitude")+": "+parseFloat(moonPosition.altitude).toFixed(3) + " rad <br/> ("+parseFloat(moonAltitudeDegree).toFixed(3)+" "+i18n.tr("degrees")+")"
+                  moonAzimuthLabel.text = i18n.tr("Azimuth")+": "+parseFloat(moonPosition.azimuth).toFixed(3)+ " rad <br/> ("+parseFloat(moonAzimuthDegree).toFixed(3)+" "+i18n.tr("degrees")+")"
+                  moonDistanceLabel.text = i18n.tr("Distance")+": "+parseInt(moonPosition.distance) + " Km"
+                  parallacticAngleLabel.text = i18n.tr("Parallactic Angle")+": "+ parseFloat(moonPosition.parallacticAngle).toFixed(3) + " rad <br/> ("+parseFloat(moonParallacticAngleDegree).toFixed(3)+" "+i18n.tr("degrees")+")"
 
-                    //--- new: params available only with  Mooncalc js
-                    constellationLabel.text = i18n.tr("Constellation")+": "+ moonCalcData.constellation
-                    moonTrajectoryLabel.text = i18n.tr("Moon trajectory")+": "+ moonCalcData.trajectory
-                    /* file name with zodiac image to show */
-                    root.zodiacImage = Qt.resolvedUrl("images/"+moonCalcData.constellation +".png") 
-                    zodiacImageButton.visible = true
-                    //------
+                  /* Illumination and Phase */
+                  var moonPhase = Suncalc.getMoonIllumination(chosenDate);
 
-                    var moonAngleDegree = moonPhase.angle * 180 / Math.PI;
+                  /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
+                  var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
 
-                    /* if > 0.50 moon decrease */
-                    moonAngleLabel.text = i18n.tr("Angle")+": "+moonPhase.angle + " rad ("+parseFloat(moonAngleDegree).toFixed(4)+" "+ i18n.tr("degrees")+")"
+                  /* illuminated fraction: varies from 0.0 (new moon) to 1.0 (full moon) */
+                  moonPhaseFractionLabel.text = i18n.tr("Illuminated fraction")+": "+ (parseFloat(moonPhase.fraction).toFixed(2)*100) +" %"
 
-                    /* ----- Rise and Set ------- */
-                    var moonRise = Suncalc.getMoonTimes(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
+                  /* moon phase; varies from 0.0 to 1.0 if > 0.50 moon decrease */
+                  //moonPhaseLabel.text = i18n.tr("Phase")+": "+parseInt(moonPhase.phase) + " <b> ("+moonCalcData.phase+ ")</b>"
+                  moonPhaseLabel.text = i18n.tr("Phase")+": <b> ("+moonCalcData.phase+ ")</b>"
 
-                    /* maybe a bug: moon.rise returned is null ONLY for chosenDate = today. Solution: set it by hands */
-                    var riseMoon = moonRise.rise;
-                    if(riseMoon == null){
-                       riseMoon = new Date();
-                    }
+                  /* new: params available with  Mooncalc js */
+                  constellationLabel.text = i18n.tr("Constellation")+": "+ moonCalcData.constellation
+                  moonTrajectoryLabel.text = i18n.tr("Moon trajectory")+": "+ moonCalcData.trajectory
 
-                    moonRiseLabel.text = i18n.tr("MoonRise")+": "+Dateutils.getLocalTime(riseMoon,cityCoordinates.utcoffset);
-                    moonSetLabel.text = i18n.tr("MoonSet")+": "+Dateutils.getLocalTime(moonRise.set,cityCoordinates.utcoffset);
+                  /* zodiac image to show */
+                  root.zodiacImage = Qt.resolvedUrl("images/"+moonCalcData.constellation +".png")
+                  zodiacImageButton.visible = true
 
-                    /*
-                      NOTE: moonRise.alwaysUp, moonRise.alwaysDown values are always undefined (maybe a bug ?) don't show them
-                    */
+                  var moonAngleDegree = moonPhase.angle * 180 / Math.PI;
+                  //if > 0.50 moon decrease
+                  moonAngleLabel.text = i18n.tr("Angle")+": "+parseFloat(moonPhase.angle).toFixed(3) + " rad <br/> ("+parseFloat(moonAngleDegree).toFixed(4)+" "+i18n.tr("degrees")+")"
 
-                    //DEBUG: PrintUtils.printMoonReport(chosenDate, moonPosition, moonPhase, moonRise);
+                  var moonRise = Suncalc.getMoonTimes(chosenDate, cityCoordinates.latitude, cityCoordinates.longitude);
+                  moonRiseLabel.text = i18n.tr("MoonRise")+": "+Dateutils.getLocalTime(moonRise.rise,cityCoordinates.utcoffset);
+                  moonSetLabel.text = i18n.tr("MoonSet")+": "+Dateutils.getLocalTime(moonRise.set,cityCoordinates.utcoffset);
 
-                    //Dateutils.printDateLocalTime(times.sunrise, times.sunset, moonRise.rise, moonRise.set, -3);
+                  /*
+                    NOTE: maybe for bug o the lib, moonRise.alwaysUp, moonRise.alwaysDown values are always undefined (?) don't show them
+                  */
 
-                    sunImageContainer.visible = true
-                    moonImageContainer.visible = true
-                    resultColumn.visible = true
-                    sunInfoRow.visible = true
-                    moonInfoRow.visible = true
-                    cityInfoRow.visible = true
-                    alertRow.visible = true;
-                }
-            }
+                  //DEBUG: PrintUtils.printMoonReport(chosenDate, moonPosition, moonPhase, moonRise);
+
+                  sunImageContainer.visible = true
+                  moonImageContainer.visible = true
+                  resultColumn.visible = true
+                  sunInfoRow.visible = true
+                  moonInfoRow.visible = true
+                  cityInfoRow.visible = true
+                  cityTimeInfoRow.visible = true
+                  cityUtcOffsetRow.visible = true
+                  alertRow.visible = true
+              }
+           }
         }
 
         /* invisible line separator */
@@ -424,7 +406,6 @@ Page {
              width: units.gu(100)
              height: units.gu(0.1)
         }
-
 
         Row{
             id: cityInfoRow

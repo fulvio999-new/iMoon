@@ -228,7 +228,7 @@ function getMoonIllumination (date) {
         s = sunCoords(d),
         m = moonCoords(d),
 
-        sdist = 149598000, // distance from Earth to Sun in km
+        sdist = 149598000, // distance from Earth to Sun in km        
 
         phi = acos(sin(s.dec) * sin(m.dec) + cos(s.dec) * cos(m.dec) * cos(s.ra - m.ra)),
         inc = atan(sdist * sin(phi), m.dist - sdist * cos(phi)),

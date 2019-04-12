@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: imoon.fulvio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-11 09:59+0000\n"
+"POT-Creation-Date: 2019-04-12 15:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr ""
 #: ../qml/NotificationMessage.qml:16 ../qml/MainPagePhone.qml:146
 #: ../qml/MainPagePhone.qml:200 ../qml/MainPageTablet.qml:143
 #: ../qml/MainPageTablet.qml:195 ../qml/FavouriteCountryCityDialogue.qml:40
-#: ../qml/Main.qml:200 ../qml/Main.qml:243
+#: ../qml/AddCityPage.qml:45 ../qml/AddCityPage.qml:93
 msgid "Close"
 msgstr ""
 
@@ -61,24 +61,24 @@ msgstr ""
 
 #: ../qml/MainPagePhone.qml:132 ../qml/MainPagePhone.qml:186
 #: ../qml/MainPageTablet.qml:129 ../qml/MainPageTablet.qml:181
-#: ../qml/Main.qml:186 ../qml/Main.qml:229
+#: ../qml/AddCityPage.qml:31 ../qml/AddCityPage.qml:79
 msgid "Found"
 msgstr ""
 
 #: ../qml/MainPagePhone.qml:132 ../qml/MainPageTablet.qml:129
-#: ../qml/Main.qml:229
+#: ../qml/AddCityPage.qml:31
 msgid "country"
 msgstr ""
 
 #: ../qml/MainPagePhone.qml:154 ../qml/MainPagePhone.qml:208
 #: ../qml/MainPageTablet.qml:151 ../qml/MainPageTablet.qml:203
-#: ../qml/Main.qml:208 ../qml/Main.qml:251
+#: ../qml/AddCityPage.qml:53 ../qml/AddCityPage.qml:101
 msgid "Select"
 msgstr ""
 
 #: ../qml/MainPagePhone.qml:165 ../qml/MainPagePhone.qml:300
 #: ../qml/MainPageTablet.qml:162 ../qml/MainPageTablet.qml:284
-#: ../qml/FavouriteCountryCityDialogue.qml:18 ../qml/Main.qml:322
+#: ../qml/FavouriteCountryCityDialogue.qml:18 ../qml/AddCityPage.qml:157
 msgid "City"
 msgstr ""
 
@@ -87,7 +87,7 @@ msgid "city"
 msgstr ""
 
 #: ../qml/MainPagePhone.qml:289 ../qml/MainPageTablet.qml:273
-#: ../qml/FavouriteCountryCityDialogue.qml:18 ../qml/Main.qml:301
+#: ../qml/FavouriteCountryCityDialogue.qml:18 ../qml/AddCityPage.qml:136
 msgid "Country"
 msgstr ""
 
@@ -99,101 +99,101 @@ msgstr ""
 msgid "Calculate"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:342 ../qml/MainPageTablet.qml:325
+#: ../qml/MainPagePhone.qml:339 ../qml/MainPageTablet.qml:316
 msgid "Timezone"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:343 ../qml/MainPageTablet.qml:326
-#: ../qml/Main.qml:397
+#: ../qml/MainPagePhone.qml:340 ../qml/MainPageTablet.qml:317
+#: ../qml/AddCityPage.qml:232
 msgid "UTC offset"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:343 ../qml/MainPageTablet.qml:326
+#: ../qml/MainPagePhone.qml:340 ../qml/MainPageTablet.qml:317
 msgid "hours"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:344 ../qml/MainPageTablet.qml:327
-#: ../qml/Main.qml:339
+#: ../qml/MainPagePhone.qml:341 ../qml/MainPageTablet.qml:318
+#: ../qml/AddCityPage.qml:174
 msgid "Latitude"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:345 ../qml/MainPageTablet.qml:328
-#: ../qml/Main.qml:356
+#: ../qml/MainPagePhone.qml:342 ../qml/MainPageTablet.qml:319
+#: ../qml/AddCityPage.qml:191
 msgid "Longitude"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:349 ../qml/MainPageTablet.qml:332
+#: ../qml/MainPagePhone.qml:348 ../qml/MainPageTablet.qml:325
 msgid "Sunrise"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:350 ../qml/MainPageTablet.qml:333
+#: ../qml/MainPagePhone.qml:349 ../qml/MainPageTablet.qml:326
 msgid "Sunset"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:351 ../qml/MainPageTablet.qml:334
+#: ../qml/MainPagePhone.qml:350 ../qml/MainPageTablet.qml:327
 msgid "Solar Noon"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:359 ../qml/MainPagePhone.qml:374
-#: ../qml/MainPageTablet.qml:342 ../qml/MainPageTablet.qml:358
+#: ../qml/MainPagePhone.qml:358 ../qml/MainPagePhone.qml:373
+#: ../qml/MainPageTablet.qml:335 ../qml/MainPageTablet.qml:350
 msgid "Altitude"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:359 ../qml/MainPagePhone.qml:360
-#: ../qml/MainPagePhone.qml:374 ../qml/MainPagePhone.qml:376
-#: ../qml/MainPagePhone.qml:381 ../qml/MainPagePhone.qml:406
-#: ../qml/MainPageTablet.qml:342 ../qml/MainPageTablet.qml:343
-#: ../qml/MainPageTablet.qml:358 ../qml/MainPageTablet.qml:360
-#: ../qml/MainPageTablet.qml:364 ../qml/MainPageTablet.qml:388
+#: ../qml/MainPagePhone.qml:358 ../qml/MainPagePhone.qml:359
+#: ../qml/MainPagePhone.qml:373 ../qml/MainPagePhone.qml:374
+#: ../qml/MainPagePhone.qml:376 ../qml/MainPagePhone.qml:401
+#: ../qml/MainPageTablet.qml:335 ../qml/MainPageTablet.qml:336
+#: ../qml/MainPageTablet.qml:350 ../qml/MainPageTablet.qml:351
+#: ../qml/MainPageTablet.qml:353 ../qml/MainPageTablet.qml:378
 msgid "degrees"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:360 ../qml/MainPagePhone.qml:376
-#: ../qml/MainPageTablet.qml:343 ../qml/MainPageTablet.qml:360
+#: ../qml/MainPagePhone.qml:359 ../qml/MainPagePhone.qml:374
+#: ../qml/MainPageTablet.qml:336 ../qml/MainPageTablet.qml:351
 msgid "Azimuth"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:378 ../qml/MainPageTablet.qml:362
+#: ../qml/MainPagePhone.qml:375 ../qml/MainPageTablet.qml:352
 msgid "Distance"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:381 ../qml/MainPageTablet.qml:364
+#: ../qml/MainPagePhone.qml:376 ../qml/MainPageTablet.qml:353
 msgid "Parallactic Angle"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:391 ../qml/MainPageTablet.qml:373
+#: ../qml/MainPagePhone.qml:385 ../qml/MainPageTablet.qml:362
 msgid "Illuminated fraction"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:394 ../qml/MainPageTablet.qml:375
+#: ../qml/MainPagePhone.qml:389 ../qml/MainPageTablet.qml:366
 msgid "Phase"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:397 ../qml/MainPageTablet.qml:378
+#: ../qml/MainPagePhone.qml:392 ../qml/MainPageTablet.qml:369
 msgid "Constellation"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:398 ../qml/MainPageTablet.qml:379
+#: ../qml/MainPagePhone.qml:393 ../qml/MainPageTablet.qml:370
 msgid "Moon trajectory"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:406 ../qml/MainPageTablet.qml:388
+#: ../qml/MainPagePhone.qml:401 ../qml/MainPageTablet.qml:378
 msgid "Angle"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:418 ../qml/MainPageTablet.qml:399
+#: ../qml/MainPagePhone.qml:404 ../qml/MainPageTablet.qml:381
 msgid "MoonRise"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:419 ../qml/MainPageTablet.qml:400
+#: ../qml/MainPagePhone.qml:405 ../qml/MainPageTablet.qml:382
 msgid "MoonSet"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:489 ../qml/MainPageTablet.qml:463
+#: ../qml/MainPagePhone.qml:475 ../qml/MainPageTablet.qml:444
 msgid "Times does not care of DayLight Saving: if used add +1 hour"
 msgstr ""
 
-#: ../qml/MainPagePhone.qml:653 ../qml/MainPageTablet.qml:627
+#: ../qml/MainPagePhone.qml:639 ../qml/MainPageTablet.qml:608
 msgid "Display"
 msgstr ""
 
@@ -221,77 +221,81 @@ msgstr ""
 msgid "Operation executed successfully"
 msgstr ""
 
-#: ../qml/Main.qml:115
-msgid "Success"
-msgstr ""
-
-#: ../qml/Main.qml:120
-msgid "Latitude, Longitude must be numeric with '.' decimal separator"
-msgstr ""
-
-#: ../qml/Main.qml:125
-msgid "Missing required value"
-msgstr ""
-
-#: ../qml/Main.qml:130
-msgid "City already exist in the country"
-msgstr ""
-
-#: ../qml/Main.qml:186
-msgid "zones"
-msgstr ""
-
-#: ../qml/Main.qml:260 ../qml/Main.qml:308 ../qml/Main.qml:381
-#: ../qml/Main.qml:440
-msgid "Choose"
-msgstr ""
-
-#: ../qml/Main.qml:278
+#: ../qml/AddCityPage.qml:22
 msgid "Add a new city"
 msgstr ""
 
-#: ../qml/Main.qml:373
+#: ../qml/AddCityPage.qml:62 ../qml/AddCityPage.qml:143
+#: ../qml/AddCityPage.qml:216 ../qml/AddCityPage.qml:275
+msgid "Choose"
+msgstr ""
+
+#: ../qml/AddCityPage.qml:79
+msgid "zones"
+msgstr ""
+
+#: ../qml/AddCityPage.qml:208
 msgid "TimeZone"
 msgstr ""
 
-#: ../qml/Main.qml:413
+#: ../qml/AddCityPage.qml:248
 msgid "Insert"
 msgstr ""
 
-#: ../qml/Main.qml:459
+#: ../qml/AddCityPage.qml:294
 msgid "Field Required"
 msgstr ""
 
-#: ../qml/Main.qml:471
+#: ../qml/Main.qml:114
+msgid "Success"
+msgstr ""
+
+#: ../qml/Main.qml:119
+msgid "Latitude, Longitude must be numeric with '.' decimal separator"
+msgstr ""
+
+#: ../qml/Main.qml:124
+msgid "Missing required value"
+msgstr ""
+
+#: ../qml/Main.qml:129
+msgid "City already exist in the country"
+msgstr ""
+
+#: ../qml/TerminologyPage.qml:23
 msgid "Terminology and Notes"
 msgstr ""
 
-#: ../qml/Main.qml:491
+#: ../qml/TerminologyPage.qml:44
 msgid "Solar-noon: time when the sun is in the highest position"
 msgstr ""
 
-#: ../qml/Main.qml:499
+#: ../qml/TerminologyPage.qml:52
 msgid "Azimuth: angular measurement in a spherical coordinate system"
 msgstr ""
 
-#: ../qml/Main.qml:507
+#: ../qml/TerminologyPage.qml:60
 msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
 msgstr ""
 
-#: ../qml/Main.qml:515
+#: ../qml/TerminologyPage.qml:68
 msgid "Sun and Moon parameters are show with 4 decimal digits"
 msgstr ""
 
-#: ../qml/Main.qml:523
+#: ../qml/TerminologyPage.qml:76
 msgid "Day light saving (DLS): advancing clocks during summer months"
 msgstr ""
 
-#: ../qml/Main.qml:531
+#: ../qml/TerminologyPage.qml:84
 msgid "Showed times don't consider DLS (add +1 hour to get it)"
 msgstr ""
 
-#: ../qml/Main.qml:539
+#: ../qml/TerminologyPage.qml:92
 msgid "1 rad = 180°/π = 57.295779513°"
+msgstr ""
+
+#: ../qml/TerminologyPage.qml:113
+msgid "Credit: photopills.com for the image"
 msgstr ""
 
 #: iMoon.desktop.in.h:1

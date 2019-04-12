@@ -33,7 +33,7 @@ function printMoonReport(chosenDate, moonPosition, moonPhase, moonRise){
     console.log("Phase: "+ moonPhase.phase);
     console.log("Angle: "+ moonPhase.angle);
     console.log("MoonRise:"+Dateutils.getTimeFromDate(moonRise.rise));
-    console.log("MoonSet:"+Dateutils.getTimeFromDate(moonRise.set));
+    console.log("MoonSet:"+Dateutils.getTimeFromDate(moonRise.set));    
     console.log("----------------------------------------- ");
 
 }

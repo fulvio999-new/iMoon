@@ -5,12 +5,12 @@ import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
 
 /* library from github.com/mourner/suncalc  */
-import "suncalc.js" as Suncalc
+import "./js/suncalc.js" as Suncalc
 
-import "Storage.js" as Storage
-import "DateUtils.js" as Dateutils
-import "PrintUtils.js" as PrintUtils
-import "ValidationUtils.js" as ValidationUtils
+import "./js/Storage.js" as Storage
+import "./js/DateUtils.js" as Dateutils
+import "./js/PrintUtils.js" as PrintUtils
+import "./js/ValidationUtils.js" as ValidationUtils
 
 
 /*!
@@ -72,7 +72,6 @@ MainView {
     //height: units.gu(108)
     /* ---------------------------- */
 
-
     //true if horizontal screen
     property bool landscapeWindow: root.width > root.height
 
@@ -91,7 +90,7 @@ MainView {
         property bool isFirstUse : true;
         property bool defaultDataImported : false;
         property bool removeOldLocationTable : true;
-        /* favourite city, country to load at start-up so that user don't need to search them */
+        /* user favourite city and country to load at start-up */
         property string favouriteCountry : '';
         property string favouriteCity : '';
     }
@@ -130,418 +129,40 @@ MainView {
         NotificationMessage{message:i18n.tr("City already exist in the country")}
     }
 
-
     PageStack {
-        id: pageStack
+          id: pageStack
 
-        /* set the firts page of the application depending on the page width */
-        Component.onCompleted: {
+          /* set the firts page of the application depending on the page width */
+          Component.onCompleted: {
 
-            if(root.width <= units.gu(54)) {
-               pageStack.push(mainPagePhone) //BQ E4.5
-
-            }else if(root.width > units.gu(110)) {
-                pageStack.push(mainPageTablet)
-             }else{
-                 pageStack.push(mainPagePhone) //phones other than E4.5
-             }
-        }
-
-        /* The country names loaded at App startUp form Phone or Tablet main page */
-        ListModel {
-            id: countryNamesListModel
-        }
-
-        /* the world time zone list (used in Add new city page) */
-        ListModel {
-            id: timeZoneListModel
-        }
-
-        /* The available city names for the choosen country */
-        ListModel {
-            id: cityNamesListModel
-        }
-
-        Component {
-            id: mainPageTablet
-            MainPageTablet{}
-        }
-
-        Component {
-            id: mainPagePhone
-            MainPagePhone{}
-        }
-
-        Component {
-            id: zodiacImagePopUp
-            ZodiacImage{}
-        }
-
-        /* ------------- Time zone Chooser (used in add new City page) --------------- */
-        Component {
-                 id: timeZoneChooserComponent
-
-                 Dialog {
-                     id: timeZoneChooserDialog
-                     title: i18n.tr("Found")+" "+timeZoneListModel.count+" "+ i18n.tr("zones")
-
-                     OptionSelector {
-                         id: timeZoneOptionSelector
-                         expanded: true
-                         multiSelection: false
-                         delegate: OptionSelectorDelegate { text: zone; }
-                         model: timeZoneListModel
-                         containerHeight: itemHeight * 6
-                     }
-
-                     Row {
-                         spacing: units.gu(2)
-                         Button {
-                             text: i18n.tr("Close")
-                             width: units.gu(14)
-                             onClicked: {
-                                 PopupUtils.close(timeZoneChooserDialog)
-                             }
-                         }
-
-                         Button {
-                             text: i18n.tr("Select")
-                             width: units.gu(14)
-                             onClicked: {
-                                var targetTimeZone = timeZoneListModel.get(timeZoneOptionSelector.selectedIndex).zone;
-                                var utcoffset = timeZoneListModel.get(timeZoneOptionSelector.selectedIndex).utcoffset;
-                                utcOffsetText.text = utcoffset;
-                                timeZoneChooserButton.text = targetTimeZone;
-                                PopupUtils.close(timeZoneChooserDialog)
-                             }
-                         }
-                     }
+              if(root.width <= units.gu(54)) {
+                 pageStack.push(Qt.resolvedUrl("MainPagePhone.qml")) //BQ E4.5
+              }else if(root.width > units.gu(110)) {
+                  pageStack.push(Qt.resolvedUrl("MainPageTablet.qml"))
+               }else{
+                   pageStack.push(Qt.resolvedUrl("MainPagePhone.qml")) //phones other than E4.5
                }
-        }
-        /* --------------------------------------------- */
+          }
 
-        /* ------------- Country Chooser --------------- */
-        Component {
-                 id: countryNameChooserComponent
+          /* The country names loaded at App startUp form Phone or Tablet main page */
+          ListModel {
+              id: countryNamesListModel
+          }
 
-                 Dialog {
-                     id: countryNameChooserDialog
-                     title: i18n.tr("Found")+" "+countryNamesListModel.count+" "+ i18n.tr("country")
+          /* the world time zone list (used in Add new city page) */
+          ListModel {
+              id: timeZoneListModel
+          }
 
-                     OptionSelector {
-                         id: cityNameOptionSelector
-                         expanded: true
-                         multiSelection: false
-                         delegate: OptionSelectorDelegate { text: country; }
-                         model: countryNamesListModel
-                         containerHeight: itemHeight * 6
-                     }
+          /* The available city names for the choosen country */
+          ListModel {
+              id: cityNamesListModel
+          }
 
-                     Row {
-                         spacing: units.gu(2)
-                         Button {
-                             text: i18n.tr("Close")
-                             width: units.gu(14)
-                             onClicked: {
-                                 PopupUtils.close(countryNameChooserDialog)
-                             }
-                         }
-
-                         Button {
-                             text: i18n.tr("Select")
-                             width: units.gu(14)
-                             onClicked: {
-                                var targetCountry = countryNamesListModel.get(cityNameOptionSelector.selectedIndex).country;
-                                Storage.getCityNames(targetCountry);
-                                /* get the available Timezone in the choosen country */
-                                Storage.getTimeZonesForCountry(targetCountry);
-
-                                addCountryChooserButton.text = targetCountry;
-                                timeZoneChooserButton.text = i18n.tr("Choose");
-                                utcOffsetText.text = "";
-                                timeZoneChooserButton.enabled = true;
-                                PopupUtils.close(countryNameChooserDialog)
-                             }
-                         }
-                     }
-               }
-        }
-        /* -------------------------------------------------------------------- */
-
-
-        /* Page to add a new city not present in the database */
-        Page {
-            id:addCityPage
-            visible: false
-
-            header: PageHeader {
-                title: i18n.tr("Add a new city")
-            }
-
-            Column{
-                spacing: units.gu(2)
-                //anchors.leftMargin: units.gu(5)
-                width: parent.width
-                height: parent.height
-
-                /* placeholder */
-                Rectangle {
-                    color: "transparent"
-                    width: parent.width
-                    height: units.gu(6)
-                }
-
-                //---------- Country -------
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(3)
-
-                    Label{
-                        id:countryNameLabel
-                        text: "* "+i18n.tr("Country")+":"
-                    }
-
-                    Button {
-                        id: addCountryChooserButton
-                        iconName: "find"
-                        width: units.gu(23)
-                        text: i18n.tr("Choose")
-                        onClicked: {
-                            PopupUtils.open(countryNameChooserComponent, addCountryChooserButton)
-                        }
-                    }
-                }
-
-                //---------- City -------
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(6)
-
-                    Label{
-                        id:cityNameLabel
-                        text: "* "+i18n.tr("City")+":"
-                    }
-
-                    TextField{
-                        id: newCityNameText
-                        width: units.gu(23)
-                    }
-                }
-
-                //---------- Latitude -------
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(3)
-
-                    Label{
-                        id:latitudeLabel
-                        anchors.verticalCenter: latitudeText.verticalCenter
-                        text: "* "+i18n.tr("Latitude")+":"
-                    }
-
-                    TextField{
-                        id: latitudeText
-                        width: units.gu(23)
-                    }
-                }
-
-                //---------- Longitude -------
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(2)
-
-                    Label{
-                        id: longitudeLabel
-                        anchors.verticalCenter: longitudeText.verticalCenter
-                        text: "* "+i18n.tr("Longitude")+":"
-                    }
-
-                    TextField{
-                        id: longitudeText
-                        width: units.gu(23)
-                    }
-                }
-
-                //---------- TimeZone -------
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(2)
-
-                    Label{
-                        id: timezoneLabel
-                        anchors.verticalCenter: timeZoneChooserButton.verticalCenter
-                        text: "* "+i18n.tr("TimeZone")+":"
-                    }
-
-                    Button {
-                        id: timeZoneChooserButton
-                        enabled:false
-                        iconName: "find"
-                        width: units.gu(23)
-                        text: i18n.tr("Choose")
-                        onClicked: {
-                            PopupUtils.open(timeZoneChooserComponent, timeZoneChooserButton)
-                        }
-                    }
-
-                }
-
-                //---------- UTC offset -------
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(2)
-
-                    Label{
-                        id: utcOffsetLabel
-                        anchors.verticalCenter: utcOffsetText.verticalCenter
-                        text: "* "+i18n.tr("UTC offset")+":"
-                    }
-
-                    TextField{
-                        id: utcOffsetText
-                        readOnly: true
-                        width: units.gu(23)
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(2)
-
-                    Button{
-                        id: addButton
-                        text:i18n.tr("Insert")
-                        width: units.gu(25)
-                        color: UbuntuColors.green
-                        onClicked: {
-
-                            if(ValidationUtils.isNotNumeric(latitudeText.text) || ValidationUtils.isNotNumeric(longitudeText.text)){
-                                PopupUtils.open(notificationNotNumericValueDialogue)
-
-                            } else if(ValidationUtils.isInputTextEmpty(addCountryChooserButton.text) ||
-                                      ValidationUtils.isInputTextEmpty(newCityNameText.text) ||
-                                      ValidationUtils.isInputTextEmpty(latitudeText.text)    ||
-                                      ValidationUtils.isInputTextEmpty(longitudeText.text)   ||
-                                      ValidationUtils.isInputTextEmpty(timeZoneChooserButton.text)    ||
-                                      ValidationUtils.isInputTextEmpty(utcOffsetText.text))
-
-                            {
-                                PopupUtils.open(notificationInputInvalidDialogue)
-
-                            }else if(Storage.isCityDuplicated(addCountryChooserButton.text, newCityNameText.text) ){
-                                PopupUtils.open(notificationCityDuplicatedDialogue)
-
-                            }else{
-                                Storage.addNewCity(addCountryChooserButton.text, newCityNameText.text, latitudeText.text, longitudeText.text, timeZoneChooserButton.text,utcOffsetText.text)
-
-                                PopupUtils.open(notificationSuccessDialogue)
-
-                                //clean input fields
-                                addCountryChooserButton.text = i18n.tr("Choose")
-                                newCityNameText.text = ""
-                                latitudeText.text = ""
-                                longitudeText.text = ""
-                                timeZoneChooserButton.text = ""
-                                utcOffsetText.text = ""
-
-                                //reload listmodels
-                                Storage.getCountryNames()
-                            }
-                          }
-                       }
-               }
-
-               Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-
-                    Label{
-                        id: messageLabel
-                        text: "* "+i18n.tr("Field Required")
-                    }
-                }
-            }
-       }
-
-        //----------- some useful terminology ---------------
-        Page{
-            id:terminologyPage
-            visible: false
-
-            header: PageHeader {
-                title: i18n.tr("Terminology and Notes")
-            }
-
-            Column{
-                spacing: units.gu(2)
-
-                width: parent.width
-                height: parent.height
-
-                /* placeholder */
-                Rectangle {
-                    color: "transparent"
-                    width: parent.width
-                    height: units.gu(6)
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: solarNoon
-                        text: i18n.tr("Solar-noon: time when the sun is in the highest position")
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: azimuth
-                        text: i18n.tr("Azimuth: angular measurement in a spherical coordinate system")
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: latitudeLongitude
-                        text: i18n.tr("Latitude and Longitude values uses Decimal Degree (DD) scale")
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: parameterRound
-                        text: i18n.tr("Sun and Moon parameters are show with 4 decimal digits")
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: dayLight
-                        text: i18n.tr("Day light saving (DLS): advancing clocks during summer months")
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: hourInfo
-                        text: "<b>"+i18n.tr("Showed times don't consider DLS (add +1 hour to get it)")+"</b>"
-                    }
-                }
-
-                Row{
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    Label{
-                        id: radian
-                        text: i18n.tr("1 rad = 180°/π = 57.295779513°")
-                    }
-                }
-
-            }
-        }
-   }
+          Component {
+              id: zodiacImagePopUp
+              ZodiacImage{}
+          }
+     }
 
 }
