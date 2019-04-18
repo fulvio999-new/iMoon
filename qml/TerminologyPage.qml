@@ -12,6 +12,8 @@ import "./js/DateUtils.js" as Dateutils
 import "./js/PrintUtils.js" as PrintUtils
 import "./js/ValidationUtils.js" as ValidationUtils
 
+import "./js/Utility.js" as Utility
+
 /*
   Some useful terminology about moon & sun
 */
@@ -23,9 +25,21 @@ Page{
         title: i18n.tr("Terminology and Notes")
     }
 
+    Flickable {
+                id: infoPageFlickable
+                clip: true
+                contentHeight: Utility.getTerminologyPageContentHeight()
+                anchors {
+                       top: parent.top
+                       left: parent.left
+                       right: parent.right
+                       bottom: terminologyPage.bottom
+                       bottomMargin: units.gu(2)
+                }
+
     Column{
         id: infoColumn
-        spacing: units.gu(2)
+        spacing: units.gu(1)
 
         width: parent.width
         height: parent.height
@@ -96,8 +110,8 @@ Page{
         Image {
               id: image
               anchors.horizontalCenter: parent.horizontalCenter
-              width: parent.width * 0.8
-              height: parent.width * 0.8
+              width: parent.width * 0.7
+              height: parent.width * 0.6
               source: Qt.resolvedUrl("images/azimuth-elevation.png")
               fillMode: Image.PreserveAspectCrop
               /* to reduce the amount of image pixel stored, to improve performance on load, NOT the scale of the image */
@@ -114,4 +128,14 @@ Page{
              }
          }
     }
+
+
+ }
+
+ /* To show a scrolbar on the side */
+ Scrollbar {
+     flickableItem: infoPageFlickable
+     align: Qt.AlignTrailing
+ }
+
 }

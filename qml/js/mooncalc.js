@@ -53,6 +53,8 @@ Sources of the algorithm : http://www.abecedarical.com/zenosamples/zs_lunarphase
     ip = normalize((jd - 2451550.1) / 29.530588853);
     age = ip * 29.53;
 
+    //console.log("AGE:"+age);
+
     if (age <  1.84566) {
       phase = 'NEW MOON';
       trajectory = 'ascendent';
@@ -62,7 +64,7 @@ Sources of the algorithm : http://www.abecedarical.com/zenosamples/zs_lunarphase
     } else if (age <  9.22831) {
       phase = 'First quarter';
       trajectory = 'ascendent';
-    } else if (age < 12.91963) {
+    } else if (age < 13.91963) {  //FIX, old value: 12.91963
       phase = 'Waxing gibbous';
       trajectory = 'ascendent';
     } else if (age < 16.61096) {

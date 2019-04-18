@@ -14,6 +14,7 @@ import "./js/PrintUtils.js" as PrintUtils
 /* used to get Moon phase description and zodiac constellation */
 import "./js/mooncalc.js" as Mooncalc
 
+import "./js/Utility.js" as Utility
 
 /*
    Main page with the layout for tablets
@@ -25,7 +26,7 @@ Page {
     Component.onCompleted: {
 
         //For users that have old version
-        if(settings.removeOldLocationTable == true){
+        if(settings.removeOldLocationTable == true) {
            Storage.dropLocationTable();
            Storage.createLocationTable();
            Storage.insertCityWithTimeZone();
@@ -246,6 +247,18 @@ Page {
      }
     //-------------------------------------------------------
 
+    Flickable {
+                id: resultPageFlickable
+                clip: true
+                contentHeight: Utility.getContentHeight()
+                anchors {
+                       top: parent.top
+                       left: parent.left
+                       right: parent.right
+                       bottom: mainPage.bottom
+                       bottomMargin: units.gu(2)
+                }
+
     Column{
           id: resultColumn
           spacing: units.gu(2)
@@ -355,15 +368,14 @@ Page {
                   /* Illumination and Phase */
                   var moonPhase = Suncalc.getMoonIllumination(chosenDate);
 
-                  /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
-                  var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
-
                   /* illuminated fraction: varies from 0.0 (new moon) to 1.0 (full moon) */
                   moonPhaseFractionLabel.text = i18n.tr("Illuminated fraction")+": "+ (parseFloat(moonPhase.fraction).toFixed(2)*100) +" %"
 
+                  /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
+                  var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
+
                   /* moon phase; varies from 0.0 to 1.0 if > 0.50 moon decrease */
-                  //moonPhaseLabel.text = i18n.tr("Phase")+": "+parseInt(moonPhase.phase) + " <b> ("+moonCalcData.phase+ ")</b>"
-                  moonPhaseLabel.text = i18n.tr("Phase")+": <b> ("+moonCalcData.phase+ ")</b>"
+                  moonPhaseLabel.text = i18n.tr("Phase")+": <b> "+moonCalcData.phase+ "</b>"
 
                   /* new: params available with  Mooncalc js */
                   constellationLabel.text = i18n.tr("Constellation")+": "+ moonCalcData.constellation
@@ -393,8 +405,8 @@ Page {
                   sunInfoRow.visible = true
                   moonInfoRow.visible = true
                   cityInfoRow.visible = true
-                  cityTimeInfoRow.visible = true
-                  cityUtcOffsetRow.visible = true
+                  //cityTimeInfoRow.visible = true
+                  //cityUtcOffsetRow.visible = true
                   alertRow.visible = true
               }
            }
@@ -432,6 +444,7 @@ Page {
                 text: " "
             }
         }
+
 
         /* in case of DLS show a warning */
         Row{
@@ -613,7 +626,15 @@ Page {
                }
 
             }
-
         }
     }
+
+  } //Flickable
+
+  /* To show a scrolbar on the side */
+  Scrollbar {
+      flickableItem: resultPageFlickable
+      align: Qt.AlignTrailing
+  }
+
 }

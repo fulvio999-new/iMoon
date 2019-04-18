@@ -378,15 +378,14 @@ Page {
                     /* Illumination and Phase */
                     var moonPhase = Suncalc.getMoonIllumination(chosenDate);
 
-                    /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
-                    var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
-
                     /* illuminated fraction: varies from 0.0 (new moon) to 1.0 (full moon) */
                     moonPhaseFractionLabel.text = i18n.tr("Illuminated fraction")+": "+ (parseFloat(moonPhase.fraction).toFixed(2)*100) +" %"
 
+                    /* NOTE: for precision reason, use Mooncalc js lib instead of Suncalc for moon phase label */
+                    var moonCalcData = Mooncalc.getMoonInformations(chosenDate);
+
                     /* moon phase; varies from 0.0 to 1.0 if > 0.50 moon decrease */
-                    //moonPhaseLabel.text = i18n.tr("Phase")+": "+parseInt(moonPhase.phase) + " <b> ("+moonCalcData.phase+ ")</b>"
-                    moonPhaseLabel.text = i18n.tr("Phase")+": <b> ("+moonCalcData.phase+ ")</b>"
+                    moonPhaseLabel.text = i18n.tr("Phase")+": <b> "+moonCalcData.phase+ "</b>"
 
                     /* new: params available with  Mooncalc js */
                     constellationLabel.text = i18n.tr("Constellation")+": "+ moonCalcData.constellation
