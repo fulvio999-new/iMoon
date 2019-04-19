@@ -14,3 +14,5 @@ V 1.3
 V 1.5 Used to Mooncal lib to get Moon phase description an zodiac name and pictures
 
 v 1.6.1 fix for layout on phones
+
+v 1.6.2 Improved code quality. Attempt to fix calculation precision
