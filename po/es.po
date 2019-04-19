@@ -1,31 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the imoon.fulvio package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: imoon.fulvio\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-19 08:56+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-04-19 11:01+0200\n"
+"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"Language-Team: UBports Spanish Team\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../qml/ProductInfoDialogue.qml:9
 msgid "Product Info"
-msgstr ""
+msgstr "Información del producto"
 
 #: ../qml/ProductInfoDialogue.qml:10
 msgid ""
 "A simple offline Moon phases and Sun parameters calculator based on SunCalc "
 "and Mooncalc, a BSD-licensed JS library"
 msgstr ""
+"Calculadora, sin conexión, de fases lunares y del sol basada en SunCalc y "
+"Mooncalc: biblioteca JS con licencia BSD"
 
 #: ../qml/ProductInfoDialogue.qml:13 ../qml/ZodiacImage.qml:17
 #: ../qml/NotificationMessage.qml:16 ../qml/MainPagePhone.qml:146
@@ -33,111 +35,111 @@ msgstr ""
 #: ../qml/MainPageTablet.qml:196 ../qml/FavouriteCountryCityDialogue.qml:40
 #: ../qml/AddCityPage.qml:45 ../qml/AddCityPage.qml:93
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: ../qml/NotificationMessage.qml:12
 msgid "Message"
-msgstr ""
+msgstr "Mensaje"
 
 #: ../qml/NotificationMessage.qml:13
 msgid "Operation result"
-msgstr ""
+msgstr "Resultado de la operación"
 
 #: ../qml/MainPagePhone.qml:74 ../qml/MainPageTablet.qml:71
 msgid "Info"
-msgstr ""
+msgstr "Información"
 
 #: ../qml/MainPagePhone.qml:86 ../qml/MainPageTablet.qml:83
 msgid "Favourite"
-msgstr ""
+msgstr "Favorito"
 
 #: ../qml/MainPagePhone.qml:95
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 #: ../qml/MainPagePhone.qml:105 ../qml/MainPageTablet.qml:102
 msgid "Help"
-msgstr ""
+msgstr "Ayuda"
 
 #: ../qml/MainPagePhone.qml:132 ../qml/MainPagePhone.qml:186
 #: ../qml/MainPageTablet.qml:130 ../qml/MainPageTablet.qml:182
 #: ../qml/AddCityPage.qml:31 ../qml/AddCityPage.qml:79
 msgid "Found"
-msgstr ""
+msgstr "Encontrado"
 
 #: ../qml/MainPagePhone.qml:132 ../qml/MainPageTablet.qml:130
 #: ../qml/AddCityPage.qml:31
 msgid "country"
-msgstr ""
+msgstr "país"
 
 #: ../qml/MainPagePhone.qml:154 ../qml/MainPagePhone.qml:208
 #: ../qml/MainPageTablet.qml:152 ../qml/MainPageTablet.qml:204
 #: ../qml/AddCityPage.qml:53 ../qml/AddCityPage.qml:101
 msgid "Select"
-msgstr ""
+msgstr "Seleccionar"
 
 #: ../qml/MainPagePhone.qml:165 ../qml/MainPagePhone.qml:300
 #: ../qml/MainPageTablet.qml:163 ../qml/MainPageTablet.qml:297
 #: ../qml/FavouriteCountryCityDialogue.qml:18 ../qml/AddCityPage.qml:157
 msgid "City"
-msgstr ""
+msgstr "Ciudad"
 
 #: ../qml/MainPagePhone.qml:186 ../qml/MainPageTablet.qml:182
 msgid "city"
-msgstr ""
+msgstr "ciudad"
 
 #: ../qml/MainPagePhone.qml:289 ../qml/MainPageTablet.qml:286
 #: ../qml/FavouriteCountryCityDialogue.qml:18 ../qml/AddCityPage.qml:136
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 #: ../qml/MainPagePhone.qml:318 ../qml/MainPageTablet.qml:308
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: ../qml/MainPagePhone.qml:330 ../qml/MainPageTablet.qml:320
 msgid "Calculate"
-msgstr ""
+msgstr "Calcular"
 
 #: ../qml/MainPagePhone.qml:339 ../qml/MainPageTablet.qml:329
 msgid "Timezone"
-msgstr ""
+msgstr "Zona horaria"
 
 #: ../qml/MainPagePhone.qml:340 ../qml/MainPageTablet.qml:330
 #: ../qml/AddCityPage.qml:232
 msgid "UTC offset"
-msgstr ""
+msgstr "Diferencia horaria con UTC"
 
 #: ../qml/MainPagePhone.qml:340 ../qml/MainPageTablet.qml:330
 msgid "hours"
-msgstr ""
+msgstr "horas"
 
 #: ../qml/MainPagePhone.qml:341 ../qml/MainPageTablet.qml:331
 #: ../qml/AddCityPage.qml:174
 msgid "Latitude"
-msgstr ""
+msgstr "Latitud"
 
 #: ../qml/MainPagePhone.qml:342 ../qml/MainPageTablet.qml:332
 #: ../qml/AddCityPage.qml:191
 msgid "Longitude"
-msgstr ""
+msgstr "Longitud"
 
 #: ../qml/MainPagePhone.qml:348 ../qml/MainPageTablet.qml:338
 msgid "Sunrise"
-msgstr ""
+msgstr "Amanecer"
 
 #: ../qml/MainPagePhone.qml:349 ../qml/MainPageTablet.qml:339
 msgid "Sunset"
-msgstr ""
+msgstr "Ocaso"
 
 #: ../qml/MainPagePhone.qml:350 ../qml/MainPageTablet.qml:340
 msgid "Solar Noon"
-msgstr ""
+msgstr "Mediodía solar"
 
 #: ../qml/MainPagePhone.qml:358 ../qml/MainPagePhone.qml:373
 #: ../qml/MainPageTablet.qml:348 ../qml/MainPageTablet.qml:363
 msgid "Altitude"
-msgstr ""
+msgstr "Latitud"
 
 #: ../qml/MainPagePhone.qml:358 ../qml/MainPagePhone.qml:359
 #: ../qml/MainPagePhone.qml:373 ../qml/MainPagePhone.qml:374
@@ -146,158 +148,177 @@ msgstr ""
 #: ../qml/MainPageTablet.qml:363 ../qml/MainPageTablet.qml:364
 #: ../qml/MainPageTablet.qml:366 ../qml/MainPageTablet.qml:390
 msgid "degrees"
-msgstr ""
+msgstr "grados"
 
 #: ../qml/MainPagePhone.qml:359 ../qml/MainPagePhone.qml:374
 #: ../qml/MainPageTablet.qml:349 ../qml/MainPageTablet.qml:364
 msgid "Azimuth"
-msgstr ""
+msgstr "Azimuth"
 
 #: ../qml/MainPagePhone.qml:375 ../qml/MainPageTablet.qml:365
 msgid "Distance"
-msgstr ""
+msgstr "Distancia"
 
 #: ../qml/MainPagePhone.qml:376 ../qml/MainPageTablet.qml:366
 msgid "Parallactic Angle"
-msgstr ""
+msgstr "Ángulo paraláctico"
 
 #: ../qml/MainPagePhone.qml:382 ../qml/MainPageTablet.qml:372
 msgid "Illuminated fraction"
-msgstr ""
+msgstr "Fracción iluminada"
 
 #: ../qml/MainPagePhone.qml:388 ../qml/MainPageTablet.qml:378
 msgid "Phase"
-msgstr ""
+msgstr "Fase"
 
 #: ../qml/MainPagePhone.qml:391 ../qml/MainPageTablet.qml:381
 msgid "Constellation"
-msgstr ""
+msgstr "Constelación"
 
 #: ../qml/MainPagePhone.qml:392 ../qml/MainPageTablet.qml:382
 msgid "Moon trajectory"
-msgstr ""
+msgstr "Trayectoria de la luna"
 
 #: ../qml/MainPagePhone.qml:400 ../qml/MainPageTablet.qml:390
 msgid "Angle"
-msgstr ""
+msgstr "Ángulo"
 
 #: ../qml/MainPagePhone.qml:403 ../qml/MainPageTablet.qml:393
 msgid "MoonRise"
-msgstr ""
+msgstr "Luna se levanta"
 
 #: ../qml/MainPagePhone.qml:404 ../qml/MainPageTablet.qml:394
 msgid "MoonSet"
-msgstr ""
+msgstr "Luna puesta"
 
 #: ../qml/MainPagePhone.qml:474 ../qml/MainPageTablet.qml:457
 msgid "Times does not care of DayLight Saving: if used add +1 hour"
-msgstr ""
+msgstr "Horas no le importa el DayLight: si se usa, agregue +1 hora"
 
 #: ../qml/MainPagePhone.qml:638 ../qml/MainPageTablet.qml:621
 msgid "Display"
-msgstr ""
+msgstr "Mostrar"
 
 #: ../qml/FavouriteCountryCityDialogue.qml:9
 msgid "Confirmation"
-msgstr ""
+msgstr "Confirmación"
 
 #: ../qml/FavouriteCountryCityDialogue.qml:22
 msgid "Set a valid country and city"
-msgstr ""
+msgstr "Establecer un país y ciudad válidos"
 
 #: ../qml/FavouriteCountryCityDialogue.qml:32
 msgid "Set country and city as favourite ?"
-msgstr ""
+msgstr "Establecer país y ciudad como favorito?"
 
 #: ../qml/FavouriteCountryCityDialogue.qml:32
 msgid "(will be loaded at startup)"
-msgstr ""
+msgstr "(será cargado al inicio)"
 
 #: ../qml/FavouriteCountryCityDialogue.qml:49
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 #: ../qml/FavouriteCountryCityDialogue.qml:56
 msgid "Operation executed successfully"
-msgstr ""
+msgstr "Operación ejecutada con éxito"
 
 #: ../qml/AddCityPage.qml:22
 msgid "Add a new city"
-msgstr ""
+msgstr "Añadir una nueva ciudad"
 
 #: ../qml/AddCityPage.qml:62 ../qml/AddCityPage.qml:143
 #: ../qml/AddCityPage.qml:216 ../qml/AddCityPage.qml:275
 msgid "Choose"
-msgstr ""
+msgstr "Elegir"
 
 #: ../qml/AddCityPage.qml:79
 msgid "zones"
-msgstr ""
+msgstr "zona horaria"
 
 #: ../qml/AddCityPage.qml:208
 msgid "TimeZone"
-msgstr ""
+msgstr "Zona horaria"
 
 #: ../qml/AddCityPage.qml:248
 msgid "Insert"
-msgstr ""
+msgstr "Introducir"
 
 #: ../qml/AddCityPage.qml:294
 msgid "Field Required"
-msgstr ""
+msgstr "Campo requerido"
 
 #: ../qml/Main.qml:114
 msgid "Success"
-msgstr ""
+msgstr "Éxito"
 
 #: ../qml/Main.qml:119
 msgid "Latitude, Longitude must be numeric with '.' decimal separator"
-msgstr ""
+msgstr "Latidud y longitud debe ser numérico con '.' como separador decimal"
 
 #: ../qml/Main.qml:124
 msgid "Missing required value"
-msgstr ""
+msgstr "Falta el valor requerido"
 
 #: ../qml/Main.qml:129
 msgid "City already exist in the country"
-msgstr ""
+msgstr "La ciudad ya existe en el país"
 
 #: ../qml/TerminologyPage.qml:25
 msgid "Terminology and Notes"
-msgstr ""
+msgstr "Terminología y notas"
 
 #: ../qml/TerminologyPage.qml:58
 msgid "Solar-noon: time when the sun is in the highest position"
-msgstr ""
+msgstr "Mediodía: momento en el que el sol está en su posición más alta"
 
 #: ../qml/TerminologyPage.qml:66
 msgid "Azimuth: angular measurement in a spherical coordinate system"
-msgstr ""
+msgstr "Azimut: medida angular en un sistema de coordenadas esféricas"
 
 #: ../qml/TerminologyPage.qml:74
 msgid "Latitude and Longitude values uses Decimal Degree (DD) scale"
 msgstr ""
+"Los valores de latitud y longitud usan una escala de grados decimales (GD)"
 
 #: ../qml/TerminologyPage.qml:82
 msgid "Sun and Moon parameters are show with 4 decimal digits"
-msgstr ""
+msgstr "Los parámetros de sol y luna se muestran con 4 dígitos decimales"
 
 #: ../qml/TerminologyPage.qml:90
 msgid "Day light saving (DLS): advancing clocks during summer months"
 msgstr ""
+"Horario de verano (DLS): el avance de los relojes en los meses de verano"
 
 #: ../qml/TerminologyPage.qml:98
 msgid "Showed times don't consider DLS (add +1 hour to get it)"
 msgstr ""
+"Los horarios no consideran el horario de verano (+1 hora para obtenerlo)"
 
 #: ../qml/TerminologyPage.qml:106
 msgid "1 rad = 180°/π = 57.295779513°"
-msgstr ""
+msgstr "1 radián = 180°/π = 57.295779513°"
 
 #: ../qml/TerminologyPage.qml:127
 msgid "Credit: photopills.com for the image"
-msgstr ""
+msgstr "La imagen pertenece a photopills.com"
 
 #: iMoon.desktop.in.h:1
 msgid "iMoon"
-msgstr ""
+msgstr "iMoon"
+
+#, fuzzy
+#~ msgid "Without UTC offset"
+#~ msgstr "Diferencia horaria con UTC"
+
+#~ msgid ""
+#~ "At that date, country COULD use 'DLS': add +1 hour at displayed times"
+#~ msgstr ""
+#~ "En esa fecha, el país PODRÍA usar el horario de verano: añada +1 hora a "
+#~ "los horarios mostrados"
+
+#~ msgid "Country:"
+#~ msgstr "País:"
+
+#~ msgid "City:"
+#~ msgstr "Ciudad:"
