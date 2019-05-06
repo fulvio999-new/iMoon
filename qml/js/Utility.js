@@ -7,11 +7,11 @@
         else
             return mainPage.height + mainPage.height/2 + units.gu(29) //phone
     }
-    
+
     function getTerminologyPageContentHeight(){
 
         if(root.width > units.gu(110))
-            return terminologyPage.height + units.gu(23)
+            return terminologyPage.height + units.gu(30)
         else
-            return terminologyPage.height + units.gu(29) //phone
+            return terminologyPage.height + units.gu(30) //phone
     }
